@@ -1,4 +1,4 @@
-'use scmict';
+'use strict';
 
 /**
  * @ngdoc function
@@ -11,7 +11,7 @@
  * Handles the admin view
  */
 (function() {
-    'use scmict';
+    'use strict';
 
     angular
         .module('calmapit.layouts')

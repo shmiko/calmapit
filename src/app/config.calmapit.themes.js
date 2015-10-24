@@ -1,5 +1,5 @@
 (function() {
-    'use scmict';
+    'use strict';
 
     angular
         .module('app')
@@ -219,6 +219,6 @@
         /**
          *  SET DEFAULT SKIN
          */
-        cmiSkinsProvider.setSkin('cyan-cloud');
+        cmiSkinsProvider.setSkin('red-dwarf');
     }
 })();

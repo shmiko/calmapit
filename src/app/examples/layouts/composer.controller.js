@@ -1,5 +1,5 @@
 (function() {
-    'use scmict';
+    'use strict';
 
     angular
         .module('app.examples.layouts')
