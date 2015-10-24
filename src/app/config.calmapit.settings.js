@@ -8,8 +8,8 @@
     /* @ngInject */
     function translateConfig(triSettingsProvider, APP_LANGUAGES) {
         // set app name & logo (used in loader, sidemenu, login pages, etc)
-        triSettingsProvider.setName('calmapit');
-        triSettingsProvider.setLogo('assets/images/logo.png');
+        //triSettingsProvider.setName('calmapit');
+        triSettingsProvider.setLogo('assets/images/calmapit_logo1.png');
         // set current version of app (shown in footer)
         triSettingsProvider.setVersion('2.2.0');
 
