@@ -57,7 +57,7 @@
         var self = this;
         self.name = name;
         self.colors = {};
-        self.isDark = false;
+        self.isDark = true;
 
         THEME_COLOR_TYPES.forEach(function(colorType) {
             self[colorType + 'Palette'] = function setPaletteType(paletteName, hues) {

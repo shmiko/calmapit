@@ -80,12 +80,12 @@
 
         // RED DWARF SKIN
         cmiThemingProvider.theme('red')
-        .primaryPalette('red')
-        .accentPalette('amber')
-        .warnPalette('purple');
+        .primaryPalette('black')
+        .accentPalette('red')
+        .warnPalette('yellow');
 
         cmiThemingProvider.theme('white-red')
-        .primaryPalette('white')
+        .primaryPalette('black')
         .accentPalette('red', {
             'default': '500'
         })
