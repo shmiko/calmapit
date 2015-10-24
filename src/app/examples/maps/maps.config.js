@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.maps')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, uiGmapGoogleMapApiProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, uiGmapGoogleMapApiProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/maps');
 
         $stateProvider
@@ -26,7 +26,7 @@
             libraries: 'weather,geometry,visualization'
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.MAPS.MAPS',
             icon: 'zmdi zmdi-pin',
             type: 'dropdown',

@@ -1,9 +1,9 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .directive('triWidget', widget);
+        .directive('cmiWidget', widget);
 
     /* @ngInject */
     function widget ($mdTheming) {
@@ -17,7 +17,7 @@
         //
         // Widget for use in dashboards
         var directive = {
-            restrict: 'E',
+            rescmict: 'E',
             templateUrl: 'app/calmapit/components/widget/widget.tmpl.html',
             transclude: true,
             replace: true,
@@ -34,11 +34,11 @@
         return directive;
 
         function link($scope, $element, attrs) {
-            // set the value of the widget layout attribute
+            // set the value of the widget layout atcmibute
             $scope.vm.widgetLayout = attrs.titlePosition === 'left' || attrs.titlePosition === 'right' ? 'row' : 'column';
-            // set the layout attribute for the widget content
+            // set the layout atcmibute for the widget content
             $scope.vm.contentLayout = angular.isUndefined(attrs.contentLayout) ? 'column' : attrs.contentLayout;
-            // set if the layout-padding attribute will be added
+            // set if the layout-padding atcmibute will be added
             $scope.vm.contentPadding = angular.isDefined(attrs.contentPadding);
             // set the content align
             $scope.vm.contentLayoutAlign = angular.isUndefined(attrs.contentLayoutAlign) ? '' : attrs.contentLayoutAlign;
@@ -64,7 +64,7 @@
                 }
             };
 
-            // remove title attribute to stop popup on hover
+            // remove title atcmibute to stop popup on hover
             $element.attr('title', '');
         }
     }

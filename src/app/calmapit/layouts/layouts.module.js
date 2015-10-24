@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.layouts', [

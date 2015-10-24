@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.menu')
         .controller('MenuDynamicController', MenuDynamicController);
 
     /* @ngInject */
-    function MenuDynamicController(dynamicMenuService, triMenu) {
+    function MenuDynamicController(dynamicMenuService, cmiMenu) {
         var vm = this;
         // get dynamic menu service to store & keep track the state of the menu status
         vm.dynamicMenu = dynamicMenuService.dynamicMenu;
@@ -17,7 +17,7 @@
 
         function toggleExtraMenu(showMenu) {
             if(showMenu) {
-                triMenu.addMenu({
+                cmiMenu.addMenu({
                     name: 'MENU.MENU.DYNAMIC-MENU',
                     icon: 'zmdi zmdi-flower-alt',
                     type: 'link',
@@ -26,7 +26,7 @@
                 });
             }
             else {
-                triMenu.removeMenu('calmapit.admin-default.menu-dynamic-dummy-page');
+                cmiMenu.removeMenu('calmapit.admin-default.menu-dynamic-dummy-page');
             }
         }
     }

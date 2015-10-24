@@ -1,9 +1,9 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit')
-        .provider('triSettings', settingsProvider);
+        .provider('cmiSettings', settingsProvider);
 
     /* @ngInject */
     function settingsProvider() {

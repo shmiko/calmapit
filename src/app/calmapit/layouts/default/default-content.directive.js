@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.layouts')
-        .directive('triDefaultContent', triDefaultContent);
+        .directive('cmiDefaultContent', cmiDefaultContent);
 
     /* @ngInject */
-    function triDefaultContent ($rootScope, $compile, $templateRequest) {
+    function cmiDefaultContent ($rootScope, $compile, $templateRequest) {
         // Usage:
         //
         // Creates:
@@ -14,7 +14,7 @@
         var directive = {
             link: link,
             replace: true,
-            restrict: 'A'
+            rescmict: 'A'
         };
         return directive;
 

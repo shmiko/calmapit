@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.dashboards')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/dashboards');
 
         $stateProvider
@@ -79,7 +79,7 @@
             controllerAs: 'vm'
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.DASHBOARDS.DASHBOARDS',
             icon: 'zmdi zmdi-home',
             type: 'dropdown',

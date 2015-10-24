@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.forms')
@@ -60,7 +60,7 @@
         }
 
         /**
-        * Create filter function for a query string
+        * Create filter function for a query scming
         */
         function createFilterFor(query) {
             var lowercaseQuery = angular.lowercase(query);

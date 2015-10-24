@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.calmap')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/calmap');
 
         $stateProvider
@@ -15,8 +15,8 @@
             views: {
                 '': {
                     templateUrl: 'app/examples/calmap/calmap.tmpl.html',
-                    controller: 'CalmapController',
-                    controllerAs: 'vm'
+                    controller: 'CalmapController'//,
+                   // controllerAs: 'vm'
                 },
                 'belowContent': {
                     templateUrl: 'app/examples/calmap/fab-button.tmpl.html',
@@ -32,7 +32,7 @@
             }
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.CALMAPIT.TITLE',
             icon: 'zmdi zmdi-check',
             state: 'calmapit.admin-default.calmap',

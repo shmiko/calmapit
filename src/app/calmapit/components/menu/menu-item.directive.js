@@ -1,62 +1,62 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .directive('triMenuItem', triMenuItemDirective);
+        .directive('cmiMenuItem', cmiMenuItemDirective);
 
     /* @ngInject */
-    function triMenuItemDirective() {
+    function cmiMenuItemDirective() {
         // Usage:
         //
         // Creates:
         //
         var directive = {
-            restrict: 'E',
-            require: '^triMenu',
+            rescmict: 'E',
+            require: '^cmiMenu',
             scope: {
                 item: '='
             },
             // replace: true,
-            template: '<div ng-include="::triMenuItem.item.template"></div>',
-            controller: triMenuItemController,
-            controllerAs: 'triMenuItem',
+            template: '<div ng-include="::cmiMenuItem.item.template"></div>',
+            controller: cmiMenuItemController,
+            controllerAs: 'cmiMenuItem',
             bindToController: true
         };
         return directive;
     }
 
     /* @ngInject */
-    function triMenuItemController($scope, $mdSidenav, $state, $filter, triBreadcrumbsService) {
-        var triMenuItem = this;
+    function cmiMenuItemController($scope, $mdSidenav, $state, $filter, cmiBreadcrumbsService) {
+        var cmiMenuItem = this;
         // load a template for this directive based on the type ( link | dropdown )
-        triMenuItem.item.template = 'app/calmapit/components/menu/menu-item-' + triMenuItem.item.type + '.tmpl.html';
+        cmiMenuItem.item.template = 'app/calmapit/components/menu/menu-item-' + cmiMenuItem.item.type + '.tmpl.html';
 
-        switch(triMenuItem.item.type) {
+        switch(cmiMenuItem.item.type) {
             case 'dropdown':
                 // if we have kids reorder them by priority
-                triMenuItem.item.children = $filter('orderBy')(triMenuItem.item.children, 'priority');
-                triMenuItem.toggleDropdownMenu = toggleDropdownMenu;
+                cmiMenuItem.item.children = $filter('orderBy')(cmiMenuItem.item.children, 'priority');
+                cmiMenuItem.toggleDropdownMenu = toggleDropdownMenu;
                 // add a check for open event
                 $scope.$on('toggleDropdownMenu', function(event, item, open) {
                     // if this is the item we are looking for
-                    if(triMenuItem.item === item) {
-                        triMenuItem.item.open = open;
+                    if(cmiMenuItem.item === item) {
+                        cmiMenuItem.item.open = open;
                     }
                     else {
-                        triMenuItem.item.open = false;
+                        cmiMenuItem.item.open = false;
                     }
                 });
                 // this event is emitted up the tree to open parent menus
                 $scope.$on('openParents', function() {
                     // openParents event so open the parent item
-                    triMenuItem.item.open = true;
+                    cmiMenuItem.item.open = true;
                     // also add this to the breadcrumbs
-                    triBreadcrumbsService.addCrumb(triMenuItem.item);
+                    cmiBreadcrumbsService.addCrumb(cmiMenuItem.item);
                 });
                 break;
             case 'link':
-                triMenuItem.openLink = openLink;
+                cmiMenuItem.openLink = openLink;
 
                 // on init check if this is current menu
                 checkItemActive($state.current.name, $state.params);
@@ -69,23 +69,23 @@
 
         function checkItemActive() {
             // first check if the state is the same
-            triMenuItem.item.active = $state.includes(triMenuItem.item.state, triMenuItem.item.params);
+            cmiMenuItem.item.active = $state.includes(cmiMenuItem.item.state, cmiMenuItem.item.params);
             // if we are now the active item reset the breadcrumbs and open all parent dropdown items
-            if(triMenuItem.item.active) {
-                triBreadcrumbsService.reset();
-                triBreadcrumbsService.addCrumb(triMenuItem.item);
+            if(cmiMenuItem.item.active) {
+                cmiBreadcrumbsService.reset();
+                cmiBreadcrumbsService.addCrumb(cmiMenuItem.item);
                 $scope.$emit('openParents');
             }
         }
 
         function toggleDropdownMenu() {
-            $scope.$parent.$parent.$broadcast('toggleDropdownMenu', triMenuItem.item, !triMenuItem.item.open);
+            $scope.$parent.$parent.$broadcast('toggleDropdownMenu', cmiMenuItem.item, !cmiMenuItem.item.open);
         }
 
         function openLink() {
-            var params = angular.isUndefined(triMenuItem.item.params) ? {} : triMenuItem.item.params;
-            $state.go(triMenuItem.item.state, params);
-            triMenuItem.item.active = true;
+            var params = angular.isUndefined(cmiMenuItem.item.params) ? {} : cmiMenuItem.item.params;
+            $state.go(cmiMenuItem.item.state, params);
+            cmiMenuItem.item.active = true;
             $mdSidenav('left').close();
         }
     }

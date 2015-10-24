@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.directives')
@@ -16,7 +16,7 @@
         //
         var directive = {
             link: link,
-            restrict: 'A',
+            rescmict: 'A',
             scope: {
                 'countupto': '=',
                 'options': '='

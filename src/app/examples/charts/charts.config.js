@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.charts')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/charts');
 
         $stateProvider
@@ -39,7 +39,7 @@
             templateUrl: 'app/examples/charts/chartjs-line.tmpl.html'
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.CHARTS.CHARTS',
             icon: 'zmdi zmdi-chart',
             type: 'dropdown',

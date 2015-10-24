@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.layouts')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/layouts');
 
         $stateProvider
@@ -46,7 +46,7 @@
             url: '/layouts/icon-menu',
             templateUrl: 'app/examples/dashboards/general/dashboard-general.tmpl.html'
         });
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.LAYOUTS.TITLE',
             icon: 'zmdi zmdi-view-module',
             type: 'dropdown',

@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.ui')
@@ -23,12 +23,12 @@
 
         function getCurrentFont() {
             // if we have no current font set, set it to first font (Roboto)
-            var fontCookie = $cookies.get('tri-typography-font');
+            var fontCookie = $cookies.get('cmi-typography-font');
             if(angular.isUndefined(fontCookie)) {
-                $cookies.put('tri-typography-font', angular.toJson(UI_FONTS[0]));
+                $cookies.put('cmi-typography-font', angular.toJson(UI_FONTS[0]));
             }
 
-            return angular.fromJson($cookies.get('tri-typography-font'));
+            return angular.fromJson($cookies.get('cmi-typography-font'));
         }
 
         function changeFont(font) {
@@ -38,7 +38,7 @@
                 },
                 active: function() {
                     angular.element('button,select,html,textarea,input').css({'font-family': font.family});
-                    $cookies.put('tri-typography-font', angular.toJson(font));
+                    $cookies.put('cmi-typography-font', angular.toJson(font));
                 },
                 inactive: function() {
                     $log.error('Font ' + font.name + ' could not be loaded');

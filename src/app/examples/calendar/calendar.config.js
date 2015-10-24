@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.calendar')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/calendar');
 
         $stateProvider
@@ -49,7 +49,7 @@
             controllerAs: 'vm'
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             // give the menu a name to show (should be translatable and in the il8n folder json)
             name: 'MENU.CALENDAR.CALENDAR',
             // point this menu to the state we created in the $stateProvider above

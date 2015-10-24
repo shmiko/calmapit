@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.email')
@@ -22,7 +22,7 @@
         }]);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider, EMAIL_ROUTES) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider, EMAIL_ROUTES) {
         $translatePartialLoaderProvider.addPart('app/examples/email');
 
         $stateProvider
@@ -118,9 +118,9 @@
             });
         });
 
-        triMenuProvider.addMenu(emailMenu);
+        cmiMenuProvider.addMenu(emailMenu);
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             type: 'divider',
             priority: 2.3
         });

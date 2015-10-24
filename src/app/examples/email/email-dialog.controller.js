@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.email')
         .controller('EmailDialogController', EmailDialogController);
 
     /* @ngInject */
-    function EmailDialogController($timeout, $mdDialog, $filter, triSkins, textAngularManager, title, email, contacts, getFocus) {
+    function EmailDialogController($timeout, $mdDialog, $filter, cmiSkins, textAngularManager, title, email, contacts, getFocus) {
         var contactsData = contacts.data;
 
         var vm = this;
@@ -17,7 +17,7 @@
         vm.showCCSIcon = 'zmdi zmdi-arrow-drop-down';
         vm.showCCS = false;
         vm.toggleCCS = toggleCCS;
-        vm.triSkin = triSkins.getCurrent();
+        vm.cmiSkin = cmiSkins.getCurrent();
         vm.queryContacts = queryContacts;
 
         ///////////////
@@ -48,9 +48,9 @@
         ////////////////
         if(getFocus) {
             $timeout(function() {
-                // Retrieve the scope and trigger focus
-                var editorScope = textAngularManager.retrieveEditor('emailBody').scope;
-                editorScope.displayElements.text.trigger('focus');
+                // Recmieve the scope and cmigger focus
+                var editorScope = textAngularManager.recmieveEditor('emailBody').scope;
+                editorScope.displayElements.text.cmigger('focus');
             }, 500);
         }
     }

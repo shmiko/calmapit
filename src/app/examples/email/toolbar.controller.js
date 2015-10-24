@@ -1,14 +1,14 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.email')
         .controller('EmailToolbarController', EmailToolbarController);
 
     /* @ngInject */
-    function EmailToolbarController($rootScope, $mdMedia, $filter, $mdUtil, $mdSidenav, $state, triBreadcrumbsService, triLayout, EMAIL_ROUTES) {
+    function EmailToolbarController($rootScope, $mdMedia, $filter, $mdUtil, $mdSidenav, $state, cmiBreadcrumbsService, cmiLayout, EMAIL_ROUTES) {
         var vm = this;
-        vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
+        vm.breadcrumbs = cmiBreadcrumbsService.breadcrumbs;
         vm.filterEmailList = filterEmailList;
         vm.hideMenuButton = hideMenuButton;
         vm.openSideNav = openSideNav;
@@ -27,7 +27,7 @@
         }
 
         function hideMenuButton() {
-            return triLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-md');
+            return cmiLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-md');
         }
 
         /**

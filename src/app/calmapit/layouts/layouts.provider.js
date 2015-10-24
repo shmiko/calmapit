@@ -1,10 +1,10 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit')
         .run(layoutRunner)
-        .provider('triLayout', layoutProvider);
+        .provider('cmiLayout', layoutProvider);
 
     /* @ngInject */
     function layoutProvider() {
@@ -58,10 +58,10 @@
     }
 
     /* @ngInject */
-    function layoutRunner($rootScope, triLayout) {
+    function layoutRunner($rootScope, cmiLayout) {
         // check for $stateChangeStart and update the layouts if we have data.layout set
         // if nothing set reset to defaults for every state
-        var destroyOn = $rootScope.$on('$stateChangeStart', triLayout.updateLayoutFromState);
+        var destroyOn = $rootScope.$on('$stateChangeStart', cmiLayout.updateLayoutFromState);
         $rootScope.$on('$destroy', removeWatch);
 
         /////////////

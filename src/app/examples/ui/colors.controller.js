@@ -1,19 +1,19 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.ui')
         .controller('ColorsController', ColorsController);
 
     /* @ngInject */
-    function ColorsController($mdDialog, triTheming) {
+    function ColorsController($mdDialog, cmiTheming) {
         var vm = this;
         vm.colourRGBA = colourRGBA;
-        vm.palettes = triTheming.palettes;
+        vm.palettes = cmiTheming.palettes;
         vm.selectPalette = selectPalette;
 
         function colourRGBA(value) {
-            var rgba = triTheming.rgba(value);
+            var rgba = cmiTheming.rgba(value);
             return {
                 'background-color': rgba
             };

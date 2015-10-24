@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.dashboards')
@@ -12,9 +12,9 @@
         // Creates:
         //
         var directive = {
-            require: 'triWidget',
+            require: 'cmiWidget',
             link: link,
-            restrict: 'A'
+            rescmict: 'A'
         };
         return directive;
 

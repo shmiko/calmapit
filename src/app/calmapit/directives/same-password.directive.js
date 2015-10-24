@@ -1,9 +1,9 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.directives')
-        .directive('triSamePassword', samePassword);
+        .directive('cmiSamePassword', samePassword);
 
     /* @ngInject */
     function samePassword() {
@@ -21,19 +21,19 @@
         // When both input values are the same the inputs will be set to valid
 
         var directive = {
-            restrict: 'A',
+            rescmict: 'A',
             require: 'ngModel',
             link: link,
             scope: {
-                triSamePassword: '='
+                cmiSamePassword: '='
             }
         };
         return directive;
 
         function link(scope, element, attrs, ngModel) {
             ngModel.$viewChangeListeners.push(function() {
-                ngModel.$setValidity('samePassword', scope.triSamePassword.$modelValue === ngModel.$modelValue);
-                scope.triSamePassword.$setValidity('samePassword', scope.triSamePassword.$modelValue === ngModel.$modelValue);
+                ngModel.$setValidity('samePassword', scope.cmiSamePassword.$modelValue === ngModel.$modelValue);
+                scope.cmiSamePassword.$setValidity('samePassword', scope.cmiSamePassword.$modelValue === ngModel.$modelValue);
             });
         }
     }

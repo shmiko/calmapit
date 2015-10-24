@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.todo')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/todo');
 
         $stateProvider
@@ -32,7 +32,7 @@
             }
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.TODO.TITLE',
             icon: 'zmdi zmdi-check',
             state: 'calmapit.admin-default.todo',

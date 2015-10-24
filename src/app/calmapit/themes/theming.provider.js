@@ -1,9 +1,9 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.themes')
-        .provider('triTheming', themingProvider);
+        .provider('cmiTheming', themingProvider);
 
     /* @ngInject */
     function themingProvider($mdThemingProvider) {

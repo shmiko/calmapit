@@ -1,21 +1,21 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .directive('triWizard', TriWizard);
+        .directive('cmiWizard', TriWizard);
 
     /* @ngInject */
     function TriWizard() {
-        // Usage: <div tri-wizard> (put some forms in here) </div>
+        // Usage: <div cmi-wizard> (put some forms in here) </div>
         //
         // Creates: Nothing
         //
         var directive = {
             bindToController: true,
             controller: WizardController,
-            controllerAs: 'triWizard',
-            restrict: 'A'
+            controllerAs: 'cmiWizard',
+            rescmict: 'A'
         };
         return directive;
     }
@@ -51,7 +51,7 @@
 
         function nextStepDisabled() {
             // get current active form
-            var form = $scope.triWizard.getForm(vm.currentStep);
+            var form = $scope.cmiWizard.getForm(vm.currentStep);
             var formInvalid = true;
             if(angular.isDefined(form) && angular.isDefined(form.$invalid)) {
                 formInvalid = form.$invalid;

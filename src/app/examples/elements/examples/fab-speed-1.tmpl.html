@@ -1,11 +1,11 @@
 <div ng-controller="Fab1Controller as vm" flex>
     <div layout="row" layout-align="center center" style="min-height: 300px" flex>
         <md-fab-speed-dial md-direction="{{vm.fabDirection}}" md-open="vm.fabStatus" ng-class="vm.fabAnimation">
-            <md-fab-trigger>
+            <md-fab-cmigger>
                 <md-button aria-label="share this post" class="md-fab md-warn">
                     <md-icon md-font-icon="zmdi zmdi-share"></md-icon>
                 </md-button>
-            </md-fab-trigger>
+            </md-fab-cmigger>
             <md-fab-actions>
                 <md-button aria-label="twitter" class="md-fab md-raised md-mini" ng-click="vm.share('Shared on Twitter', $event)">
                     <md-icon md-font-icon="fa fa-twitter"></md-icon>

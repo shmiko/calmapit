@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.ui')
         .controller('SkinsUIController', SkinsUIController);
 
     /* @ngInject */
-    function SkinsUIController($cookies, $window, triSkins, triTheming) {
+    function SkinsUIController($cookies, $window, cmiSkins, cmiTheming) {
         var vm = this;
         vm.elementColors = {
             logo: '',
@@ -14,15 +14,15 @@
             content: '',
             toolbar: ''
         };
-        vm.skins = triSkins.getSkins();
-        vm.selectedSkin = triSkins.getCurrent();
+        vm.skins = cmiSkins.getSkins();
+        vm.selectedSkin = cmiSkins.getCurrent();
         vm.trySkin = trySkin;
         vm.updatePreview = updatePreview;
 
         //////////////////////
 
         function trySkin() {
-            if(vm.selectedSkin !== triSkins.getCurrent()) {
+            if(vm.selectedSkin !== cmiSkins.getCurrent()) {
                 $cookies.put('calmapit-skin',angular.toJson({
                     skin: vm.selectedSkin.id
                 }));
@@ -33,10 +33,10 @@
 
         function updatePreview() {
             for(var element in vm.elementColors) {
-                var theme = triTheming.getTheme(vm.selectedSkin.elements[element]);
+                var theme = cmiTheming.getTheme(vm.selectedSkin.elements[element]);
                 var hue = angular.isUndefined(theme.colors.primary.hues.default) ? '500' : theme.colors.primary.hues.default;
-                var color = triTheming.getPaletteColor(theme.colors.primary.name, hue);
-                vm.elementColors[element] = triTheming.rgba(color.value);
+                var color = cmiTheming.getPaletteColor(theme.colors.primary.name, hue);
+                vm.elementColors[element] = cmiTheming.rgba(color.value);
             }
         }
 

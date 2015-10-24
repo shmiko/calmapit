@@ -1,6 +1,6 @@
 
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app')

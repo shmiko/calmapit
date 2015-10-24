@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.dashboards')
@@ -9,13 +9,13 @@
     function loadDataWidget($parse, $http, $mdDialog) {
         // Usage:
         //
-        // <tri-widget load-data-widget="{ variableName: urlOfJSONData }"></tri-widget>
+        // <cmi-widget load-data-widget="{ variableName: urlOfJSONData }"></cmi-widget>
         // Creates:
         //
         var directive = {
-            require: 'triWidget',
+            require: 'cmiWidget',
             link: link,
-            restrict: 'A'
+            rescmict: 'A'
         };
         return directive;
 

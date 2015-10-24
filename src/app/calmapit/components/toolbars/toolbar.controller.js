@@ -1,16 +1,16 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
         .controller('DefaultToolbarController', DefaultToolbarController);
 
     /* @ngInject */
-    function DefaultToolbarController($scope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, triBreadcrumbsService, triSettings, triLayout) {
+    function DefaultToolbarController($scope, $mdMedia, $translate, $state, $element, $filter, $mdUtil, $mdSidenav, $mdToast, $timeout, cmiBreadcrumbsService, cmiSettings, cmiLayout) {
         var vm = this;
-        vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
+        vm.breadcrumbs = cmiBreadcrumbsService.breadcrumbs;
         vm.emailNew = false;
-        vm.languages = triSettings.languages;
+        vm.languages = cmiSettings.languages;
         vm.openSideNav = openSideNav;
         vm.hideMenuButton = hideMenuButton;
         vm.switchLanguage = switchLanguage;
@@ -39,11 +39,11 @@
         }
 
         function hideMenuButton() {
-            return triLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-md');
+            return cmiLayout.layout.sideMenuSize !== 'hidden' && $mdMedia('gt-md');
         }
 
         function toggleNotificationsTab(tab) {
-            $scope.$parent.$broadcast('triSwitchNotificationTab', tab);
+            $scope.$parent.$broadcast('cmiSwitchNotificationTab', tab);
             vm.openSideNav('notifications');
         }
 

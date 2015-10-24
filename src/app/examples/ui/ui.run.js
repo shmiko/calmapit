@@ -1,5 +1,5 @@
 (function(jQuery) {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.ui')

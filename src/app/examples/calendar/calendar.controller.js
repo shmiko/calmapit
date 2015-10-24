@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.calendar')
         .controller('CalendarController', CalendarController);
 
     /* @ngInject */
-    function CalendarController($scope, $rootScope, $mdDialog, $mdToast, $filter, $element, triTheming, triLayout, uiCalendarConfig) {
+    function CalendarController($scope, $rootScope, $mdDialog, $mdToast, $filter, $element, cmiTheming, cmiLayout, uiCalendarConfig) {
         var vm = this;
         vm.addEvent = addEvent;
         vm.calendarOptions = {
@@ -21,7 +21,7 @@
                 // update toolbar with new day for month name
                 $rootScope.$broadcast('calendar-changeday', vm.currentDay);
                 // update background image for month
-                triLayout.layout.contentClass = 'calendar-background-image background-overlay-static overlay-gradient-10 calendar-background-month-' + vm.currentDay.month();
+                cmiLayout.layout.contentClass = 'calendar-background-image background-overlay-static overlay-gradient-10 calendar-background-month-' + vm.currentDay.month();
             },
             dayClick: function(date, jsEvent, view) { //eslint-disable-line
                 vm.currentDay = date;
@@ -128,7 +128,7 @@
                 var inAnHour = moment(randomMonthDate).add(1, 'h');
                 var randomEvent = Math.floor(Math.random() * (eventNames.length - 0));
                 var randomLocation = Math.floor(Math.random() * (locationNames.length - 0));
-                var randomPalette = pickRandomProperty(triTheming.palettes);
+                var randomPalette = pickRandomProperty(cmiTheming.palettes);
                 //vm.eventSources{
                 //    googleCalendarApiKey: 'AIzaSyCDyuMEpvjNHZS8ACf1rJPhxMOODrfJyL4',
                 //    url: 'http://www.google.com/calendar/feeds/15dcnca6hga2rqna9f651qc5d0@group.calendar.google.com',
@@ -140,9 +140,9 @@
                     end: inAnHour,
                     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, fugiat! Libero ut in nam cum architecto error magnam, quidem beatae deleniti, facilis perspiciatis modi unde nostrum ea explicabo a adipisci!',
                     location: locationNames[randomLocation],
-                    backgroundColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
-                    borderColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
-                    textColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].contrast),
+                    backgroundColor: cmiTheming.rgba(cmiTheming.palettes[randomPalette]['500'].value),
+                    borderColor: cmiTheming.rgba(cmiTheming.palettes[randomPalette]['500'].value),
+                    textColor: cmiTheming.rgba(cmiTheming.palettes[randomPalette]['500'].contrast),
                     palette: randomPalette
                 });
             }

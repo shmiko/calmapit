@@ -1,9 +1,9 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .service('triBreadcrumbsService', BreadcrumbsService);
+        .service('cmiBreadcrumbsService', BreadcrumbsService);
 
     /* @ngInject */
     function BreadcrumbsService() {

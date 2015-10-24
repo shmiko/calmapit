@@ -1,24 +1,24 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
         .controller('MenuController', MenuController);
 
     /* @ngInject */
-    function MenuController(triSettings, triLayout) {
+    function MenuController(cmiSettings, cmiLayout) {
         var vm = this;
-        vm.layout = triLayout.layout;
+        vm.layout = cmiLayout.layout;
         vm.sidebarInfo = {
-            appName: triSettings.name,
-            appLogo: triSettings.logo
+            appName: cmiSettings.name,
+            appLogo: cmiSettings.logo
         };
         vm.toggleIconMenu = toggleIconMenu;
 
         ////////////
         function toggleIconMenu() {
             var menu = vm.layout.sideMenuSize === 'icon' ? 'full' : 'icon';
-            triLayout.setOption('sideMenuSize', menu);
+            cmiLayout.setOption('sideMenuSize', menu);
         }
     }
 })();

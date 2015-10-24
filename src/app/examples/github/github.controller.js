@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.github')
         .controller('GithubController', GithubController);
 
     /* @ngInject */
-    function GithubController($http, $mdToast, triLoaderService) {
+    function GithubController($http, $mdToast, cmiLoaderService) {
         var shmikAPIUrl = 'http://api.shmik.com';
         var vm = this;
         vm.data = {
@@ -22,18 +22,18 @@
         ////////////////
 
         function register() {
-            triLoaderService.setLoaderActive(true);
+            cmiLoaderService.setLoaderActive(true);
 
             $http.put(shmikAPIUrl + '/register-github-access', vm.data).
             then(function() {
                 // everything went ok
-                triLoaderService.setLoaderActive(false);
+                cmiLoaderService.setLoaderActive(false);
                 popAToast('Success!  Check your GitHub email for your invite.');
             }, registerError);
 
             function registerError(response) {
                 // something went wrong
-                triLoaderService.setLoaderActive(false);
+                cmiLoaderService.setLoaderActive(false);
                 if(angular.isDefined(response.data.error)) {
                     popAToast(response.data.error);
                 }

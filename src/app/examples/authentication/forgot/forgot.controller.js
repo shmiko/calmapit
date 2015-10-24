@@ -1,14 +1,14 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.authentication')
         .controller('ForgotController', ForgotController);
 
     /* @ngInject */
-    function ForgotController($scope, $state, $mdToast, $filter, $http, triSettings, API_CONFIG) {
+    function ForgotController($scope, $state, $mdToast, $filter, $http, cmiSettings, API_CONFIG) {
         var vm = this;
-        vm.triSettings = triSettings;
+        vm.cmiSettings = cmiSettings;
         vm.user = {
             email: ''
         };

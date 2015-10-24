@@ -1,9 +1,9 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .directive('triLoader', TriLoader);
+        .directive('cmiLoader', TriLoader);
 
     /* @ngInject */
     function TriLoader ($rootScope) {
@@ -13,7 +13,7 @@
             controllerAs: 'vm',
             template: '<div flex class="loader" ng-show="vm.status.active" layout="column" layout-fill layout-align="center center"><div class="loader-inner"><md-progress-circular md-mode="indeterminate"></md-progress-circular></div><h3 class="md-headline">{{vm.appName}}</h3></div>',
             link: link,
-            restrict: 'E',
+            rescmict: 'E',
             replace: true,
             scope: {
             }
@@ -39,10 +39,10 @@
     }
 
     /* @ngInject */
-    function TriLoaderController ($rootScope, triLoaderService, triSettings) {
+    function TriLoaderController ($rootScope, cmiLoaderService, cmiSettings) {
         var vm = this;
-        vm.appName         = triSettings.name;
-        vm.status          = triLoaderService.status;
-        vm.setLoaderActive = triLoaderService.setLoaderActive;
+        vm.appName         = cmiSettings.name;
+        vm.status          = cmiLoaderService.status;
+        vm.setLoaderActive = cmiLoaderService.setLoaderActive;
     }
 })();

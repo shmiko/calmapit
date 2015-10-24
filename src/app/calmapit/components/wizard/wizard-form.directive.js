@@ -1,35 +1,35 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .directive('triWizardForm', WizardFormProgress);
+        .directive('cmiWizardForm', WizardFormProgress);
 
     /* @ngInject */
     function WizardFormProgress() {
         // Usage:
-        //  <div tri-wizard>
-        //      <form tri-wizard-form>
+        //  <div cmi-wizard>
+        //      <form cmi-wizard-form>
         //      </form>
         //  </div>
         //
         var directive = {
-            require: ['form', '^triWizard'],
+            require: ['form', '^cmiWizard'],
             link: link,
-            restrict: 'A'
+            rescmict: 'A'
         };
         return directive;
 
         function link(scope, element, attrs, require) {
             var ngFormCtrl = require[0];
-            var triWizardCtrl = require[1];
+            var cmiWizardCtrl = require[1];
 
-            // register this form with the parent triWizard directive
-            triWizardCtrl.registerForm(ngFormCtrl);
+            // register this form with the parent cmiWizard directive
+            cmiWizardCtrl.registerForm(ngFormCtrl);
 
             // watch for form input changes and update the wizard progress
             element.on('input', function() {
-                triWizardCtrl.updateProgress();
+                cmiWizardCtrl.updateProgress();
             });
         }
     }

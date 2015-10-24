@@ -1,24 +1,24 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app')
         .config(config);
 
     /* @ngInject */
-    function config(triLayoutProvider) {
-        triLayoutProvider.setDefaultOption('toolbarSize', 'default');
+    function config(cmiLayoutProvider) {
+        cmiLayoutProvider.setDefaultOption('toolbarSize', 'default');
 
-        triLayoutProvider.setDefaultOption('toolbarShrink', true);
+        cmiLayoutProvider.setDefaultOption('toolbarShrink', true);
 
-        triLayoutProvider.setDefaultOption('toolbarClass', '');
+        cmiLayoutProvider.setDefaultOption('toolbarClass', '');
 
-        triLayoutProvider.setDefaultOption('contentClass', '');
+        cmiLayoutProvider.setDefaultOption('contentClass', '');
 
-        triLayoutProvider.setDefaultOption('sideMenuSize', 'full');
+        cmiLayoutProvider.setDefaultOption('sideMenuSize', 'full');
 
-        triLayoutProvider.setDefaultOption('showToolbar', true);
+        cmiLayoutProvider.setDefaultOption('showToolbar', true);
 
-        triLayoutProvider.setDefaultOption('footer', true);
+        cmiLayoutProvider.setDefaultOption('footer', true);
     }
 })();

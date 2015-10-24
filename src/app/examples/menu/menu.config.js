@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.menu')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/menu');
 
         $stateProvider
@@ -27,7 +27,7 @@
             templateUrl: 'app/examples/menu/dynamic-page.tmpl.html'
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.MENU.MENU',
             icon: 'zmdi zmdi-receipt',
             type: 'dropdown',

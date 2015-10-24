@@ -1,13 +1,13 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.themes')
-        .provider('triSkins', skinsProvider)
+        .provider('cmiSkins', skinsProvider)
         .run(addSkinToScope);
 
     /* @ngInject */
-    function skinsProvider($mdThemingProvider, triThemingProvider) {
+    function skinsProvider($mdThemingProvider, cmiThemingProvider) {
         var skins = {};
         var currentSkin = null;
         var useSkinCookie = false;
@@ -18,7 +18,7 @@
                     return skins[id];
                 }
 
-                var skin = new Skin(id, name, $mdThemingProvider, triThemingProvider);
+                var skin = new Skin(id, name, $mdThemingProvider, cmiThemingProvider);
 
                 skins[id] = skin;
 
@@ -69,7 +69,7 @@
     }
 
     /* @ngInject */
-    function Skin(id, name, $mdThemingProvider, triThemingProvider) {
+    function Skin(id, name, $mdThemingProvider, cmiThemingProvider) {
         var THEMABLE_ELEMENTS = ['sidebar', 'logo', 'toolbar', 'content'];
         var self = this;
         self.id = id;
@@ -87,7 +87,7 @@
             // go through each element
             for (var element in self.elements) {
                 // register theme with mdThemingProvider (will load css in the header)
-                var theme = triThemingProvider.theme(self.elements[element]);
+                var theme = cmiThemingProvider.theme(self.elements[element]);
 
                 $mdThemingProvider.theme(theme.name)
                 .primaryPalette(theme.colors.primary.name, theme.colors.primary.hues)
@@ -107,7 +107,7 @@
     }
 
     /* @ngInject */
-    function addSkinToScope($rootScope, triSkins) {
-        $rootScope.triSkin = triSkins.getCurrent();
+    function addSkinToScope($rootScope, cmiSkins) {
+        $rootScope.cmiSkin = cmiSkins.getCurrent();
     }
 })();

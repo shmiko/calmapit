@@ -1,16 +1,16 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
         .controller('FooterController', FooterController);
 
     /* @ngInject */
-    function FooterController(triSettings, triLayout) {
+    function FooterController(cmiSettings, cmiLayout) {
         var vm = this;
-        vm.name = triSettings.name;
+        vm.name = cmiSettings.name;
         vm.date = new Date();
-        vm.layout = triLayout.layout;
-        vm.version = triSettings.version;
+        vm.layout = cmiLayout.layout;
+        vm.version = cmiSettings.version;
     }
 })();

@@ -1,9 +1,9 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .service('triLoaderService', LoaderService);
+        .service('cmiLoaderService', LoaderService);
 
     /* @ngInject */
     function LoaderService() {

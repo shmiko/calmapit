@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.forms')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/forms');
 
         $stateProvider
@@ -33,7 +33,7 @@
             templateUrl: 'app/examples/forms/validation.tmpl.html'
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.FORMS.FORMS',
             icon: 'zmdi zmdi-calendar-check',
             type: 'dropdown',
@@ -60,7 +60,7 @@
                 state: 'calmapit.admin-default.forms-validation'
             }]
         });
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             type: 'divider',
             priority: 3.4
         });

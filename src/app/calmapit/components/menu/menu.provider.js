@@ -1,9 +1,9 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .provider('triMenu', menuProvider);
+        .provider('cmiMenu', menuProvider);
 
 
     /* @ngInject */

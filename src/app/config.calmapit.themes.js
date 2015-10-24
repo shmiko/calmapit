@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app')
         .config(themesConfig);
 
     /* @ngInject */
-    function themesConfig ($mdThemingProvider, triThemingProvider, triSkinsProvider) {
+    function themesConfig ($mdThemingProvider, cmiThemingProvider, cmiSkinsProvider) {
         /**
          *  PALETTES
          */
@@ -46,78 +46,78 @@
             'contrastDefaultColor': 'light'
         });
 
-        var triCyanMap = $mdThemingProvider.extendPalette('cyan', {
+        var cmiCyanMap = $mdThemingProvider.extendPalette('cyan', {
             'contrastDefaultColor': 'light',
             'contrastLightColors': '500 700 800 900',
             'contrastStrongLightColors': '500 700 800 900'
         });
 
-        // Register the new color palette map with the name triCyan
-        $mdThemingProvider.definePalette('triCyan', triCyanMap);
+        // Register the new color palette map with the name cmiCyan
+        $mdThemingProvider.definePalette('cmiCyan', cmiCyanMap);
 
         /**
          *  SKINS
          */
 
         // CYAN CLOUD SKIN
-        triThemingProvider.theme('cyan')
-        .primaryPalette('triCyan')
+        cmiThemingProvider.theme('cyan')
+        .primaryPalette('cmiCyan')
         .accentPalette('amber')
         .warnPalette('deep-orange');
 
-        triThemingProvider.theme('white-cyan')
+        cmiThemingProvider.theme('white-cyan')
         .primaryPalette('white')
         .accentPalette('cyan', {
             'default': '500'
         })
         .warnPalette('deep-orange');
 
-        triSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
+        cmiSkinsProvider.skin('cyan-cloud', 'Cyan Cloud')
         .sidebarTheme('cyan')
         .toolbarTheme('white-cyan')
         .logoTheme('cyan')
         .contentTheme('cyan');
 
         // RED DWARF SKIN
-        triThemingProvider.theme('red')
+        cmiThemingProvider.theme('red')
         .primaryPalette('red')
         .accentPalette('amber')
         .warnPalette('purple');
 
-        triThemingProvider.theme('white-red')
+        cmiThemingProvider.theme('white-red')
         .primaryPalette('white')
         .accentPalette('red', {
             'default': '500'
         })
         .warnPalette('purple');
 
-        triSkinsProvider.skin('red-dwarf', 'Red Dwarf')
+        cmiSkinsProvider.skin('red-dwarf', 'Red Dwarf')
         .sidebarTheme('red')
         .toolbarTheme('white-red')
         .logoTheme('red')
         .contentTheme('red');
 
         // PLUMB PURPLE SKIN
-        triThemingProvider.theme('purple')
+        cmiThemingProvider.theme('purple')
         .primaryPalette('purple')
         .accentPalette('deep-orange')
         .warnPalette('amber');
 
-        triThemingProvider.theme('white-purple')
+        cmiThemingProvider.theme('white-purple')
         .primaryPalette('white')
         .accentPalette('purple', {
             'default': '400'
         })
         .warnPalette('deep-orange');
 
-        triSkinsProvider.skin('plumb-purple', 'Plumb Purple')
+        cmiSkinsProvider.skin('plumb-purple', 'Plumb Purple')
         .sidebarTheme('purple')
         .toolbarTheme('white-purple')
         .logoTheme('purple')
         .contentTheme('purple');
 
         // DARK KNIGHT SKIN
-        triThemingProvider.theme('dark')
+        cmiThemingProvider.theme('dark')
         .primaryPalette('black', {
             'default': '300'
         })
@@ -126,47 +126,47 @@
         .backgroundPalette('black')
         .dark();
 
-        triSkinsProvider.skin('dark-knight', 'Dark Knight')
+        cmiSkinsProvider.skin('dark-knight', 'Dark Knight')
         .sidebarTheme('dark')
         .toolbarTheme('dark')
         .logoTheme('dark')
         .contentTheme('dark');
 
         // BATTLESHIP GREY SKIN
-        triThemingProvider.theme('blue-grey')
+        cmiThemingProvider.theme('blue-grey')
         .primaryPalette('blue-grey')
         .accentPalette('amber')
         .warnPalette('orange');
 
-        triThemingProvider.theme('white-blue-grey')
+        cmiThemingProvider.theme('white-blue-grey')
         .primaryPalette('white')
         .accentPalette('blue-grey', {
             'default': '400'
         })
         .warnPalette('orange');
 
-        triSkinsProvider.skin('battleship-grey', 'Battleship Grey')
+        cmiSkinsProvider.skin('battleship-grey', 'Battleship Grey')
         .sidebarTheme('blue-grey')
         .toolbarTheme('white-blue-grey')
         .logoTheme('blue-grey')
         .contentTheme('blue-grey');
 
         // ZESTY ORANGE SKIN
-        triThemingProvider.theme('orange')
+        cmiThemingProvider.theme('orange')
         .primaryPalette('orange' , {
             'default': '800'
         })
         .accentPalette('lime')
         .warnPalette('amber');
 
-        triThemingProvider.theme('white-orange')
+        cmiThemingProvider.theme('white-orange')
         .primaryPalette('white')
         .accentPalette('orange', {
             'default': '500'
         })
         .warnPalette('lime');
 
-        triSkinsProvider.skin('zesty-orange', 'Zesty Orange')
+        cmiSkinsProvider.skin('zesty-orange', 'Zesty Orange')
         .sidebarTheme('orange')
         .toolbarTheme('white-orange')
         .logoTheme('orange')
@@ -174,35 +174,35 @@
 
 
         // INDIGO ISLAND SKIN
-        triThemingProvider.theme('indigo')
+        cmiThemingProvider.theme('indigo')
         .primaryPalette('indigo' , {
             'default': '600'
         })
         .accentPalette('red')
         .warnPalette('lime');
 
-        triSkinsProvider.skin('indigo-island', 'Indigo Island')
+        cmiSkinsProvider.skin('indigo-island', 'Indigo Island')
         .sidebarTheme('indigo')
         .toolbarTheme('indigo')
         .logoTheme('indigo')
         .contentTheme('indigo');
 
         // KERMIT GREEN SKIN
-        triThemingProvider.theme('light-green')
+        cmiThemingProvider.theme('light-green')
         .primaryPalette('light-green' , {
             'default': '400'
         })
         .accentPalette('amber')
         .warnPalette('deep-orange');
 
-        triThemingProvider.theme('white-light-green')
+        cmiThemingProvider.theme('white-light-green')
         .primaryPalette('white')
         .accentPalette('light-green', {
             'default': '400'
         })
         .warnPalette('deep-orange');
 
-        triSkinsProvider.skin('kermit-green', 'Kermit Green')
+        cmiSkinsProvider.skin('kermit-green', 'Kermit Green')
         .sidebarTheme('light-green')
         .toolbarTheme('white-light-green')
         .logoTheme('light-green')
@@ -211,14 +211,14 @@
 
         /**
          *  FOR DEMO PURPOSES ALLOW SKIN TO BE SAVED IN A COOKIE
-         *  This overrides any skin set in a call to triSkinsProvider.setSkin if there is a cookie
+         *  This overrides any skin set in a call to cmiSkinsProvider.setSkin if there is a cookie
          *  REMOVE LINE BELOW FOR PRODUCTION SITE
          */
-        triSkinsProvider.useSkinCookie(true);
+        cmiSkinsProvider.useSkinCookie(true);
 
         /**
          *  SET DEFAULT SKIN
          */
-        triSkinsProvider.setSkin('cyan-cloud');
+        cmiSkinsProvider.setSkin('cyan-cloud');
     }
 })();

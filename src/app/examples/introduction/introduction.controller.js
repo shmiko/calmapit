@@ -1,14 +1,14 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.introduction')
         .controller('IntroductionController', IntroductionController);
 
     /* @ngInject */
-    function IntroductionController(triSettings) {
+    function IntroductionController(cmiSettings) {
         var vm = this;
-        vm.version = triSettings.version;
+        vm.version = cmiSettings.version;
         vm.featureRows = [
             [{
                 name: 'Google Calendar',

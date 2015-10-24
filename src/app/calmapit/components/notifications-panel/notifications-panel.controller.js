@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
@@ -55,7 +55,7 @@
         },{
             name: 'Sales',
             notifications: [{
-                title: 'Triangular Admin $21',
+                title: 'CalMapIt Admin $21',
                 icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
@@ -65,12 +65,12 @@
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             },{
-                title: 'Triangular Admin $21',
+                title: 'CalMapIt Admin $21',
                 icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             },{
-                title: 'Triangular Admin $21',
+                title: 'CalMapIt Admin $21',
                 icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
@@ -80,7 +80,7 @@
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
             },{
-                title: 'Triangular Admin $21',
+                title: 'CalMapIt Admin $21',
                 icon: 'zmdi zmdi-shopping-cart',
                 iconColor: 'rgb(76, 175, 80)',
                 date: moment().startOf('hour')
@@ -154,7 +154,7 @@
         ////////////////
 
         // add an event to switch tabs (used when user clicks a menu item before sidebar opens)
-        $scope.$on('triSwitchNotificationTab', function($event, tab) {
+        $scope.$on('cmiSwitchNotificationTab', function($event, tab) {
             vm.currentTab = tab;
         });
 

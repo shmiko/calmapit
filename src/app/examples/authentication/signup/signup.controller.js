@@ -1,14 +1,14 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.authentication')
         .controller('SignupController', SignupController);
 
     /* @ngInject */
-    function SignupController($scope, $state, $mdToast, $http, $filter, triSettings, API_CONFIG) {
+    function SignupController($scope, $state, $mdToast, $http, $filter, cmiSettings, API_CONFIG) {
         var vm = this;
-        vm.triSettings = triSettings;
+        vm.cmiSettings = cmiSettings;
         vm.signupClick = signupClick;
         vm.user = {
             name: '',

@@ -1,22 +1,22 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .directive('triMenu', triMenuDirective);
+        .directive('cmiMenu', cmiMenuDirective);
 
     /* @ngInject */
-    function triMenuDirective($location, $mdTheming, triTheming) {
+    function cmiMenuDirective($location, $mdTheming, cmiTheming) {
         // Usage:
         //
         // Creates:
         //
         var directive = {
-            restrict: 'E',
-            template: '<md-content><tri-menu-item ng-repeat="item in triMenuController.menu | orderBy:\'priority\'" item="::item"></tri-menu-item></md-content>',
+            rescmict: 'E',
+            template: '<md-content><cmi-menu-item ng-repeat="item in cmiMenuController.menu | orderBy:\'priority\'" item="::item"></cmi-menu-item></md-content>',
             scope: {},
-            controller: triMenuController,
-            controllerAs: 'triMenuController',
+            controller: cmiMenuController,
+            controllerAs: 'cmiMenuController',
             link: link
         };
         return directive;
@@ -25,17 +25,17 @@
             $mdTheming($element);
             var $mdTheme = $element.controller('mdTheme'); //eslint-disable-line
 
-            var menuColor = triTheming.getThemeHue($mdTheme.$mdTheme, 'primary', 'default');
-            var menuColorRGBA = triTheming.rgba(menuColor.value);
+            var menuColor = cmiTheming.getThemeHue($mdTheme.$mdTheme, 'primary', 'default');
+            var menuColorRGBA = cmiTheming.rgba(menuColor.value);
             $element.css({ 'background-color': menuColorRGBA });
             $element.children('md-content').css({ 'background-color': menuColorRGBA });
         }
     }
 
     /* @ngInject */
-    function triMenuController(triMenu) {
-        var triMenuController = this;
+    function cmiMenuController(cmiMenu) {
+        var cmiMenuController = this;
         // get the menu and order it
-        triMenuController.menu = triMenu.menu;
+        cmiMenuController.menu = cmiMenu.menu;
     }
 })();

@@ -1,14 +1,14 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.calendar')
         .controller('CalendarToolbarController', CalendarToolbarController);
 
     /* @ngInject */
-    function CalendarToolbarController($scope, $state, $element, $mdUtil, $mdSidenav, triBreadcrumbsService, uiCalendarConfig) {
+    function CalendarToolbarController($scope, $state, $element, $mdUtil, $mdSidenav, cmiBreadcrumbsService, uiCalendarConfig) {
         var vm = this;
-        vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
+        vm.breadcrumbs = cmiBreadcrumbsService.breadcrumbs;
         vm.changeMonth = changeMonth;
         vm.changeView = changeView;
         vm.openSideNav = openSideNav;

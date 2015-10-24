@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.dashboards')
@@ -9,7 +9,7 @@
     function calendarWidget() {
         // Usage:
         //
-        // <tri-widget calendar-widget></tri-widget>
+        // <cmi-widget calendar-widget></cmi-widget>
         //
         // Creates:
         //
@@ -17,7 +17,7 @@
             bindToController: true,
             controller: Controller,
             controllerAs: 'calendarController',
-            restrict: 'A'
+            rescmict: 'A'
         };
         return directive;
     }

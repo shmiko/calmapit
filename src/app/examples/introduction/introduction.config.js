@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.introduction')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         // setup translations path
         $translatePartialLoaderProvider.addPart('app/examples/introduction');
 
@@ -20,14 +20,14 @@
         });
 
         // add menu to calmapit
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.INTRODUCTION.INTRODUCTION',
             state: 'calmapit.admin-default.introduction',
             type: 'link',
             icon: 'zmdi zmdi-info-outline',
             priority: 0.1
         });
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             type: 'divider',
             priority: 0.2
         });

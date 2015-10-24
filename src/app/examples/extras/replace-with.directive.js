@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.extras')
@@ -13,7 +13,7 @@
         //
         var directive = {
             link: link,
-            restrict: 'A'
+            rescmict: 'A'
         };
         return directive;
 

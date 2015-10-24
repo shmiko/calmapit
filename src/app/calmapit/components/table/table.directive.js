@@ -1,14 +1,14 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('calmapit.components')
-        .directive('triTable', triTable);
+        .directive('cmiTable', cmiTable);
 
     /* @ngInject */
-    function triTable($filter) {
+    function cmiTable($filter) {
         var directive = {
-            restrict: 'E',
+            rescmict: 'E',
             scope: {
                 columns: '=',
                 contents: '=',

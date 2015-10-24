@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.authentication')
         .config(moduleConfig);
 
     /* @ngInject */
-    function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function moduleConfig($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/elements/');
 
         $stateProvider
@@ -165,7 +165,7 @@
             templateUrl: 'app/examples/elements/cards.tmpl.html'
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.ELEMENTS.ELEMENTS',
             icon: 'zmdi zmdi-graduation-cap',
             type: 'dropdown',

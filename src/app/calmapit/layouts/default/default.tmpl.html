@@ -6,13 +6,13 @@
     <!-- main content -->
     <div id="admin-panel" layout="column" flex>
         <!-- loading animation -->
-        <tri-loader></tri-loader>
+        <cmi-loader></cmi-loader>
 
         <!-- top toolbar -->
-        <md-toolbar md-scroll-shrink="layout.toolbarShrink" class="admin-toolbar" ng-if="layout.showToolbar" md-theme="{{triSkin.elements.toolbar}}" ui-view="toolbar" ng-class="[layout.toolbarSize,layout.toolbarClass]"></md-toolbar>
+        <md-toolbar md-scroll-shrink="layout.toolbarShrink" class="admin-toolbar" ng-if="layout.showToolbar" md-theme="{{cmiSkin.elements.toolbar}}" ui-view="toolbar" ng-class="[layout.toolbarSize,layout.toolbarClass]"></md-toolbar>
 
         <!-- scrollable content -->
-        <md-content ng-class="layout.contentClass" flex tri-default-content ui-view="content"></md-content>
+        <md-content ng-class="layout.contentClass" flex cmi-default-content ui-view="content"></md-content>
 
         <div ui-view="belowContent"></div>
     </div>

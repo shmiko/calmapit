@@ -1,5 +1,5 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples', [
@@ -17,7 +17,7 @@
             'app.examples.maps',
             'app.examples.menu',
             'app.examples.todo',
-            'app.examples.calmap',
+            //'app.examples.calmap',
             'app.examples.ui'
         ]);
 })();

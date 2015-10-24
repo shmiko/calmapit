@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.authentication')
         .controller('LockController', LockController);
 
     /* @ngInject */
-    function LockController($state, triSettings) {
+    function LockController($state, cmiSettings) {
         var vm = this;
         vm.loginClick = loginClick;
         vm.user = {
@@ -14,7 +14,7 @@
             email: 'info@shmik.com',
             password: ''
         };
-        vm.triSettings = triSettings;
+        vm.cmiSettings = cmiSettings;
 
         ////////////////
 

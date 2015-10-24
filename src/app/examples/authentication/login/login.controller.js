@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.authentication')
         .controller('LoginController', LoginController);
 
     /* @ngInject */
-    function LoginController($state, triSettings) {
+    function LoginController($state, cmiSettings) {
         var vm = this;
         vm.loginClick = loginClick;
         vm.socialLogins = [{
@@ -26,7 +26,7 @@
             color: '#337ab7',
             url: '#'
         }];
-        vm.triSettings = triSettings;
+        vm.cmiSettings = cmiSettings;
         // create blank user variable for login form
         vm.user = {
             email: '',

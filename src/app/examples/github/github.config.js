@@ -1,12 +1,12 @@
 (function() {
-    'use strict';
+    'use scmict';
 
     angular
         .module('app.examples.github')
         .config(config);
 
     /* @ngInject */
-    function config($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
+    function config($translatePartialLoaderProvider, $stateProvider, cmiMenuProvider) {
         $translatePartialLoaderProvider.addPart('app/examples/github');
 
         $stateProvider
@@ -23,14 +23,14 @@
             }
         });
 
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             name: 'MENU.GITHUB.GITHUB',
             state: 'calmapit.admin-default.github',
             type: 'link',
             icon: 'fa fa-github',
             priority: 1.1
         });
-        triMenuProvider.addMenu({
+        cmiMenuProvider.addMenu({
             type: 'divider',
             priority: 1.2
         });
