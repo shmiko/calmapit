@@ -1,0 +1,19 @@
+.calmap-container {
+	.slide {
+	 	&.ng-enter {
+	    	@include slideInRight();
+	  	}
+	  	&.ng-leave {
+	    	@include slideOutRight();
+	  	}
+	}
+}
+
+@media (max-width: 599px) {
+  .calmap-container {
+  	padding: 0px;
+  	md-card {
+  		margin: 0px;
+  	}
+  }
+}

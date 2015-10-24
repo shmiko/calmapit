@@ -2,13 +2,13 @@
     'use strict';
 
     angular
-        .module('app.examples.todo')
-        .controller('TodoController', TodoController);
+        .module('app.examples.calmap')
+        .controller('CalmapController', CalmapController);
 
     /* @ngInject */
-    function TodoController($scope, $state, $mdDialog) {
+    function CalmapController($scope, $state, $mdDialog) {
         var vm = this;
-        vm.todos = [
+        vm.calmaps = [
             {description: 'Material Design', priority: 'high', selected: true},
             {description: 'Install espresso machine', priority: 'high', selected: false},
             {description: 'Deploy to Server', priority: 'medium', selected: true},
@@ -18,12 +18,12 @@
             {description: 'Debug javascript', priority: 'low', selected: true},
             {description: 'Arrange meeting', priority: 'low', selected: true}
         ];
-        vm.orderTodos = orderTodos;
-        vm.removeTodo = removeTodo;
+        vm.orderCalmaps = orderCalmaps;
+        vm.removeCalmap = removeCalmap;
 
         //////////////////////////
 
-        function orderTodos(task) {
+        function orderCalmaps(task) {
             switch(task.priority){
                 case 'high':
                     return 1;
@@ -36,25 +36,25 @@
             }
         }
 
-        function removeTodo(todo){
-            for(var i = vm.todos.length - 1; i >= 0; i--) {
-                if(vm.todos[i] === todo) {
-                    vm.todos.splice(i, 1);
+        function removeCalmap(calmap){
+            for(var i = vm.calmaps.length - 1; i >= 0; i--) {
+                if(vm.calmaps[i] === calmap) {
+                    vm.calmaps.splice(i, 1);
                 }
             }
         }
 
         // watches
 
-        $scope.$on('addTodo', function( ev ){
+        $scope.$on('addCalmap', function( ev ){
             $mdDialog.show({
-                templateUrl: 'app/examples/todo/add-calmap-dialog.tmpl.html',
+                templateUrl: 'app/examples/calmap/add-calmap-dialog.tmpl.html',
                 targetEvent: ev,
                 controller: 'DialogController',
                 controllerAs: 'vm'
             })
             .then(function(answer) {
-                vm.todos.push(answer);
+                vm.calmaps.push(answer);
             });
         });
     }

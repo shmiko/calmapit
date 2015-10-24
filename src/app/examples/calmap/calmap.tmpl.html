@@ -1,0 +1,32 @@
+<div class="calmap-container" flex layout="column" layout-align="center center">
+    <div layout-fill layout="row" layout-align="center center">
+        <md-card flex="70" flex-sm="90" class="margin-top-50 margin-bottom-50">
+            <md-toolbar md-theme="{{triSkin.elements.content}}">
+                <h2 class="md-toolbar-tools" translate>CalMap</h2>
+            </md-toolbar>
+        <md-card-content class="overflow-auto">
+                <md-list class="margin-bottom-10">
+                    <md-list-item ng-repeat="calmap in vm.calmaps | orderBy:vm.orderCalmaps" ng-class="{'md-primary': calmap.priority === 'high', 'md-accent': calmap.priority === 'medium', 'md-warn': calmap.priority === 'low'}" class="slide" md-swipe-right="vm.removeCalmap(calmap)" md-no-ink>
+                        <md-checkbox ng-model="calmap.selected"></md-checkbox>
+                        <p class="no-select">
+                            {{::calmap.description}}
+                        </p>
+                        <md-text-float class="no-select">
+                            {{::calmap.priority}}
+                        </md-text-float>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout-fill layout="row" layout-align="center center">
+        <md-card flex="70" flex-sm="90" class="margin-top-20 margin-bottom-20">
+            <md-toolbar md-theme="{{triSkin.elements.content}}">
+                <h2 class="md-toolbar-tools" translate>NEW CALMAP</h2>
+            </md-toolbar>
+            <md-card-content>
+                <p translate>Remove Message</p>
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

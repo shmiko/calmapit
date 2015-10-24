@@ -17,6 +17,7 @@
             'app.examples.maps',
             'app.examples.menu',
             'app.examples.todo',
+            'app.examples.calmap',
             'app.examples.ui'
         ]);
 })();

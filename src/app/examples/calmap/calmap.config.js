@@ -2,25 +2,25 @@
     'use strict';
 
     angular
-        .module('app.examples.todo')
+        .module('app.examples.calmap')
         .config(moduleConfig);
 
     /* @ngInject */
     function moduleConfig($translatePartialLoaderProvider, $stateProvider, triMenuProvider) {
-        $translatePartialLoaderProvider.addPart('app/examples/todo');
+        $translatePartialLoaderProvider.addPart('app/examples/calmap');
 
         $stateProvider
-        .state('calmapit.admin-default.todo', {
-            url: '/todo',
+        .state('calmapit.admin-default.calmap', {
+            url: '/calmap',
             views: {
                 '': {
-                    templateUrl: 'app/examples/todo/calmap.tmpl.html',
-                    controller: 'TodoController',
+                    templateUrl: 'app/examples/calmap/calmap.tmpl.html',
+                    controller: 'CalmapController',
                     controllerAs: 'vm'
                 },
                 'belowContent': {
-                    templateUrl: 'app/examples/todo/fab-button.tmpl.html',
-                    controller: 'TodoFabController',
+                    templateUrl: 'app/examples/calmap/fab-button.tmpl.html',
+                    controller: 'CalmapFabController',
                     controllerAs: 'vm'
                 }
             },
@@ -33,9 +33,9 @@
         });
 
         triMenuProvider.addMenu({
-            name: 'MENU.TODO.TITLE',
+            name: 'MENU.CALMAPIT.TITLE',
             icon: 'zmdi zmdi-check',
-            state: 'calmapit.admin-default.todo',
+            state: 'calmapit.admin-default.calmap',
             type: 'link',
             priority: 2.4
         });
