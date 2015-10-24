@@ -30,12 +30,12 @@
         //////////////
 
         function changeMonth(direction) {
-            uiCalendarConfig.calendars['triangular-calendar'].fullCalendar(direction);
+            uiCalendarConfig.calendars['calmapit-calendar'].fullCalendar(direction);
         }
 
         function changeView(view) {
             vm.currentView = view;
-            uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('changeView', view.viewName);
+            uiCalendarConfig.calendars['calmapit-calendar'].fullCalendar('changeView', view.viewName);
         }
 
         function openSideNav(navID) {

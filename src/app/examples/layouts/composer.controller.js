@@ -39,7 +39,7 @@
                 'triLayoutProvider.setDefaultOption(\'footer\', ' + vm.layout.footer + ');\n';
 
             vm.onePageCode =
-                '.state(\'triangular.admin-default.my-state\', {' + '\n' +
+                '.state(\'calmapit.admin-default.my-state\', {' + '\n' +
                 '    // set the url of this page' + '\n' +
                 '    url: \'/my-route\',' + '\n' +
                 '    // set the html template to show on this page' + '\n' +

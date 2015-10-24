@@ -38,7 +38,7 @@
             controller: 'ForgotController',
             controllerAs: 'vm'
         })
-        .state('triangular.admin-default.profile', {
+        .state('calmapit.admin-default.profile', {
             url: '/profile',
             templateUrl: 'app/examples/authentication/profile/profile.tmpl.html',
             controller: 'ProfileController',
@@ -68,7 +68,7 @@
                 type: 'link'
             },{
                 name: 'MENU.AUTH.PROFILE',
-                state: 'triangular.admin-default.profile',
+                state: 'calmapit.admin-default.profile',
                 type: 'link'
             }]
         });

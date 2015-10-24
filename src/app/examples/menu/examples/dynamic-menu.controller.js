@@ -22,11 +22,11 @@
                     icon: 'zmdi zmdi-flower-alt',
                     type: 'link',
                     priority: 0.0,
-                    state: 'triangular.admin-default.menu-dynamic-dummy-page'
+                    state: 'calmapit.admin-default.menu-dynamic-dummy-page'
                 });
             }
             else {
-                triMenu.removeMenu('triangular.admin-default.menu-dynamic-dummy-page');
+                triMenu.removeMenu('calmapit.admin-default.menu-dynamic-dummy-page');
             }
         }
     }

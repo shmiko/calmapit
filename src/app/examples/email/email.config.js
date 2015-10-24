@@ -5,17 +5,17 @@
         .module('app.examples.email')
         .config(moduleConfig)
         .constant('EMAIL_ROUTES', [{
-            state: 'triangular-no-scroll.email.inbox',
+            state: 'calmapit-no-scroll.email.inbox',
             name: 'MENU.EMAIL.INBOX',
             url: '/email/inbox',
             icon: 'zmdi zmdi-inbox'
         },{
-            state: 'triangular-no-scroll.email.trash',
+            state: 'calmapit-no-scroll.email.trash',
             name: 'MENU.EMAIL.TRASH',
             url: '/email/trash',
             icon: 'zmdi zmdi-minus-circle'
         },{
-            state: 'triangular-no-scroll.email.sent',
+            state: 'calmapit-no-scroll.email.sent',
             name: 'MENU.EMAIL.SENT',
             url: '/email/sent',
             icon: 'zmdi zmdi-email'
@@ -26,16 +26,16 @@
         $translatePartialLoaderProvider.addPart('app/examples/email');
 
         $stateProvider
-        .state('triangular-no-scroll.email', {
+        .state('calmapit-no-scroll.email', {
             abstract: true,
             views: {
                 sidebarLeft: {
-                    templateUrl: 'app/triangular/components/menu/menu.tmpl.html',
+                    templateUrl: 'app/calmapit/components/menu/menu.tmpl.html',
                     controller: 'MenuController',
                     controllerAs: 'vm'
                 },
                 sidebarRight: {
-                    templateUrl: 'app/triangular/components/notifications-panel/notifications-panel.tmpl.html',
+                    templateUrl: 'app/calmapit/components/notifications-panel/notifications-panel.tmpl.html',
                     controller: 'NotificationsPanelController',
                     controllerAs: 'vm'
                 },

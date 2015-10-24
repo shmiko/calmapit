@@ -10,7 +10,7 @@
         $translatePartialLoaderProvider.addPart('app/examples/github');
 
         $stateProvider
-        .state('triangular.admin-default.github', {
+        .state('calmapit.admin-default.github', {
             url: '/github',
             templateUrl: 'app/examples/github/github.tmpl.html',
             controller: 'GithubController',
@@ -25,7 +25,7 @@
 
         triMenuProvider.addMenu({
             name: 'MENU.GITHUB.GITHUB',
-            state: 'triangular.admin-default.github',
+            state: 'calmapit.admin-default.github',
             type: 'link',
             icon: 'fa fa-github',
             priority: 1.1

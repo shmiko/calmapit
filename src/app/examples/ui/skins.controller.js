@@ -23,7 +23,7 @@
 
         function trySkin() {
             if(vm.selectedSkin !== triSkins.getCurrent()) {
-                $cookies.put('triangular-skin',angular.toJson({
+                $cookies.put('calmapit-skin',angular.toJson({
                     skin: vm.selectedSkin.id
                 }));
                 $window.location.reload();

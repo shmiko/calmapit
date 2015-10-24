@@ -46,13 +46,13 @@
                     var toastMessage = 'CALENDAR.EVENT.EVENT-UPDATED';
                     if(angular.isDefined(event.deleteMe) && event.deleteMe === true) {
                         // remove the event from the calendar
-                        uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('removeEvents', event._id);
+                        uiCalendarConfig.calendars['calmapit-calendar'].fullCalendar('removeEvents', event._id);
                         // change toast message
                         toastMessage = 'CALENDAR.EVENT.EVENT-DELETED';
                     }
                     else {
                         // update event
-                        uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('updateEvent', event);
+                        uiCalendarConfig.calendars['calmapit-calendar'].fullCalendar('updateEvent', event);
                     }
 
                     // pop a toast

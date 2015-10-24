@@ -10,7 +10,7 @@
         $translatePartialLoaderProvider.addPart('app/seed-module');
 
         $stateProvider
-        .state('triangular.admin-default.seed-page', {
+        .state('calmapit.admin-default.seed-page', {
             url: '/seed-module/seed-page',
             templateUrl: 'app/seed-module/seed-page.tmpl.html',
             // set the controller to load for this page
@@ -25,7 +25,7 @@
             priority: 1.1,
             children: [{
                 name: 'MENU.SEED.SEED-PAGE',
-                state: 'triangular.admin-default.seed-page',
+                state: 'calmapit.admin-default.seed-page',
                 type: 'link'
             }]
         });

@@ -36,7 +36,7 @@
         ////////////////
 
         function loginClick() {
-            $state.go('triangular.admin-default.introduction');
+            $state.go('calmapit.admin-default.introduction');
         }
     }
 })();

@@ -10,7 +10,7 @@
         $translatePartialLoaderProvider.addPart('app/examples/todo');
 
         $stateProvider
-        .state('triangular.admin-default.todo', {
+        .state('calmapit.admin-default.todo', {
             url: '/todo',
             views: {
                 '': {
@@ -35,7 +35,7 @@
         triMenuProvider.addMenu({
             name: 'MENU.TODO.TITLE',
             icon: 'zmdi zmdi-check',
-            state: 'triangular.admin-default.todo',
+            state: 'calmapit.admin-default.todo',
             type: 'link',
             priority: 2.4
         });
