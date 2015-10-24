@@ -11,43 +11,43 @@
         vm.version = triSettings.version;
         vm.featureRows = [
             [{
-                name: 'Fully Responsive',
+                name: 'Google Calendar',
                 icon: 'zmdi zmdi-laptop',
                 palette: 'cyan',
                 hue: '200'
             },{
-                name: 'Beautiful Themes',
+                name: 'Google Maps',
                 icon: 'zmdi zmdi-palette',
                 palette: 'cyan',
                 hue: '300'
             },{
-                name: 'API Ready',
+                name: 'Itinerary',
                 icon: 'zmdi zmdi-share',
                 palette: 'cyan',
                 hue: '400'
             },{
-                name: '5 Star Support',
+                name: 'Travel Hacks',
                 icon: 'zmdi zmdi-star',
                 palette: 'cyan',
                 hue: '500'
             }],
             [{
-                name: 'Built with AngularJS',
+                name: 'Bucket lists',
                 icon: 'fa fa-google',
                 palette: 'cyan',
                 hue: '600'
             },{
-                name: 'Angular Material',
+                name: 'Trips',
                 icon: 'fa fa-th-large',
                 palette: 'cyan',
                 hue: '700'
             },{
-                name: 'Gulp Build',
+                name: 'Control Panel',
                 icon: 'fa fa-terminal',
                 palette: 'cyan',
                 hue: '800'
             },{
-                name: 'SASS Stylesheets',
+                name: 'Social Media Connected',
                 icon: 'fa fa-css3',
                 palette: 'cyan',
                 hue: '900'
