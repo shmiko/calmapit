@@ -14,22 +14,22 @@
         vm.notificationGroups = [{
             name: 'Twitter',
             notifications: [{
-                title: 'Mention from oxygenna',
+                title: 'Mention from shmik',
                 icon: 'fa fa-twitter',
                 iconColor: '#55acee',
                 date: moment().startOf('hour')
             },{
-                title: 'Oxygenna',
+                title: 'shmik',
                 icon: 'fa fa-twitter',
                 iconColor: '#55acee',
                 date: moment().startOf('hour')
             },{
-                title: 'Oxygenna',
+                title: 'shmik',
                 icon: 'fa fa-twitter',
                 iconColor: '#55acee',
                 date: moment().startOf('hour')
             },{
-                title: 'Followed by Oxygenna',
+                title: 'Followed by shmik',
                 icon: 'fa fa-twitter',
                 iconColor: '#55acee',
                 date: moment().startOf('hour')

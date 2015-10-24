@@ -11,7 +11,7 @@
         vm.loginClick = loginClick;
         vm.user = {
             name: 'Morris Onions',
-            email: 'info@oxygenna.com',
+            email: 'info@shmik.com',
             password: ''
         };
         vm.triSettings = triSettings;

@@ -41,10 +41,10 @@
         }];
         vm.user = {
             name: 'Christos',
-            email: 'info@oxygenna.com',
+            email: 'info@shmik.com',
             location: 'Sitia, Crete, Greece',
-            website: 'http://www.oxygenna.com',
-            twitter: 'oxygenna',
+            website: 'http://www.shmik.com',
+            twitter: 'shmik',
             bio: 'We are a small creative web design agency \n who are passionate with our pixels.',
             current: '',
             password: '',

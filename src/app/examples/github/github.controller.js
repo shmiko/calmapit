@@ -7,7 +7,7 @@
 
     /* @ngInject */
     function GithubController($http, $mdToast, triLoaderService) {
-        var oxygennaAPIUrl = 'http://api.oxygenna.com';
+        var shmikAPIUrl = 'http://api.shmik.com';
         var vm = this;
         vm.data = {
             id: '11711437',
@@ -24,7 +24,7 @@
         function register() {
             triLoaderService.setLoaderActive(true);
 
-            $http.put(oxygennaAPIUrl + '/register-github-access', vm.data).
+            $http.put(shmikAPIUrl + '/register-github-access', vm.data).
             then(function() {
                 // everything went ok
                 triLoaderService.setLoaderActive(false);

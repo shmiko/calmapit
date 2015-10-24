@@ -26,6 +26,6 @@
         }])
         // set a constant for the API we are connecting to
         .constant('API_CONFIG', {
-            'url':  'http://calmapit-api.oxygenna.com/'
+            'url':  'http://calmapit-api.shmik.com/'
         });
 })();
