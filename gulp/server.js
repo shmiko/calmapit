@@ -32,6 +32,10 @@ function browserSyncInit(baseDir, files, browser) {
   });
 }
 
+gulp.task('server', function () {
+    new forever.Monitor('path/to/server-script.js').start();
+});
+
 gulp.task('serve', ['watch'], function () {
   browserSyncInit([
     paths.tmp + '/serve',

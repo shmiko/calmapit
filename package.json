@@ -1,8 +1,8 @@
 {
   "name": "calmapit",
-    "description": "A Calendar Map Itinerary.",
-    "author": "https://github.com/shmiko/calmapit",
-    "version": "0.0.0",
+  "description": "A Calendar Map Itinerary.",
+  "author": "https://github.com/shmiko/calmapit",
+  "version": "0.0.0",
   "devDependencies": {
     "browser-sync": "~1.7.1",
     "chalk": "~0.5.1",
@@ -53,5 +53,9 @@
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "forever-monitor": "^1.7.0",
+    "gulp-forever": "^1.0.0"
   }
 }
