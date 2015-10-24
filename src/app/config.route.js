@@ -18,7 +18,7 @@
             controller: function($state) {
                 var vm = this;
                 vm.goHome = function() {
-                    $state.go('calmapit.admin-default.dashboard-analytics');
+                    $state.go('calmapit.admin-default.introduction');
                 };
             }
         })
@@ -30,15 +30,15 @@
             controller: function($state) {
                 var vm = this;
                 vm.goHome = function() {
-                    $state.go('calmapit.admin-default.dashboard-analytics');
+                    $state.go('calmapit.admin-default.introduction');
                 };
             }
         });
 
 
         // set default routes when no path specified
-        $urlRouterProvider.when('', '/dashboards/analytics');
-        $urlRouterProvider.when('/', '/dashboards/analytics');
+        $urlRouterProvider.when('', '/introduction');
+        $urlRouterProvider.when('/', '/introduction');
 
         // always goto 404 if route not found
         $urlRouterProvider.otherwise('/404');
