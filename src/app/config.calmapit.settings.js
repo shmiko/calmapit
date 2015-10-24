@@ -11,7 +11,7 @@
         //cmiSettingsProvider.setName('calmapit');
         cmiSettingsProvider.setLogo('assets/images/calmapit_logo1.png');
         // set current version of app (shown in footer)
-        cmiSettingsProvider.setVersion('2.2.0');
+        cmiSettingsProvider.setVersion('0.12.3');
 
         // setup available languages in calmapit
         for (var lang = APP_LANGUAGES.length - 1; lang >= 0; lang--) {
