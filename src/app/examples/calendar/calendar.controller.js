@@ -81,7 +81,7 @@
         };
 
 
-        vm.eventSources2 = [{
+        vm.eventSources = [{
             events: []
         }];
 
@@ -123,51 +123,39 @@
         function createRandomEvents(number, startDate, endDate) {
             var eventNames = ['Pick up the kids', 'Remember the milk', 'Meeting with Morris', 'Car service',  'Go Surfing', 'Party at Christos house', 'Beer Oclock', 'Festival tickets', 'Laundry!', 'Haircut appointment', 'Walk the dog', 'Dentist :(', 'Board meeting', 'Go fishing'];
             var locationNames = ['London', 'New York', 'Paris', 'Burnley'];
-            //for(var x = 0; x < number; x++) {
+            for(var x = 0; x < number; x++) {
                 var randomMonthDate = randomDate(startDate, endDate);
                 var inAnHour = moment(randomMonthDate).add(1, 'h');
                 var randomEvent = Math.floor(Math.random() * (eventNames.length - 0));
                 var randomLocation = Math.floor(Math.random() * (locationNames.length - 0));
                 var randomPalette = pickRandomProperty(triTheming.palettes);
+                //vm.eventSources{
+                //    googleCalendarApiKey: 'AIzaSyCDyuMEpvjNHZS8ACf1rJPhxMOODrfJyL4',
+                //    url: 'http://www.google.com/calendar/feeds/15dcnca6hga2rqna9f651qc5d0@group.calendar.google.com',
+                //    className: 'gcal-event'};
                 vm.eventSources[0].events.push({
-                    googleCalendarApiKey: 'AIzaSyCDyuMEpvjNHZS8ACf1rJPhxMOODrfJyL4',
-                    url: 'http://www.google.com/calendar/feeds/15dcnca6hga2rqna9f651qc5d0@group.calendar.google.com',
-                    className: 'gcal-event'});
-                //vm.eventSources1[0].events.push({
-                //    title: eventNames[randomEvent],
-                //    allDay: false,
-                //    start: randomMonthDate,
-                //    end: inAnHour,
-                //    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, fugiat! Libero ut in nam cum architecto error magnam, quidem beatae deleniti, facilis perspiciatis modi unde nostrum ea explicabo a adipisci!',
-                //    location: locationNames[randomLocation],
-                //    backgroundColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
-                //    borderColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
-                //    textColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].contrast),
-                //    palette: randomPalette
-                //});
-            //}
+                    title: eventNames[randomEvent],
+                    allDay: false,
+                    start: randomMonthDate,
+                    end: inAnHour,
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, fugiat! Libero ut in nam cum architecto error magnam, quidem beatae deleniti, facilis perspiciatis modi unde nostrum ea explicabo a adipisci!',
+                    location: locationNames[randomLocation],
+                    backgroundColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
+                    borderColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].value),
+                    textColor: triTheming.rgba(triTheming.palettes[randomPalette]['500'].contrast),
+                    palette: randomPalette
+                });
+            }
         }
 
-        /* add and removes an event source of choice */
-        vm.addRemoveEventSource = function(sources) {
-            var canAdd = 0;
-            angular.forEach(sources,function(value, key){
-                if(sources[key] === source){
-                    sources.splice(key,1);
-                    canAdd = 1;
-                }
-            });
-            if(canAdd === 0){
-                sources.push(source);
-            }
-        };
+
 
         // listeners
 
         $scope.$on('addEvent', addEvent);
 
         // create 10 random events for the month
-        //createRandomEvents(100, moment().startOf('year'), moment().endOf('year'));
+        createRandomEvents(100, moment().startOf('year'), moment().endOf('year'));
 
         function randomDate(start, end) {
             var startNumber = start.toDate().getTime();
@@ -187,7 +175,7 @@
             return result;
         }
 
-        vm.eventSources = [vm.eventSources1, vm.eventSources2];
+        //vm.eventSources = [vm.eventSources1, vm.eventSources2];
 
     }
 })();

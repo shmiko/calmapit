@@ -18770,140 +18770,6 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
 .chartjs-example-chart {
   padding: 24px; }
 
-.extras-gallery-container {
-  height: 100%; }
-
-.extras-image-dialog img {
-  max-width: 100%;
-  max-height: 480px; }
-
-.timeline {
-  position: relative;
-  overflow: hidden;
-  padding: 10px 0; }
-  .timeline .timeline-widget {
-    z-index: 4;
-    opacity: 0;
-    overflow: hidden; }
-  .timeline .timeline-point {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    width: 100px;
-    height: 100px;
-    -webkit-transform: translate3D(50%, -50%, 0);
-        -ms-transform: translate3D(50%, -50%, 0);
-            transform: translate3D(50%, -50%, 0);
-    border-radius: 50%;
-    z-index: 2;
-    overflow: hidden; }
-  .timeline .timeline-point-date {
-    position: absolute;
-    z-index: 3;
-    background: inherit;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    line-height: 100px;
-    overflow: hidden;
-    transition: width 0.5s, height 0.5s;
-    -webkit-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
-    text-align: center;
-    font-size: 0.8em;
-    border-radius: 50%; }
-  .timeline:hover .timeline-point-date {
-    width: 100%;
-    height: 100%; }
-  .timeline .timeline-y-axis {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-    z-index: 1; }
-  .timeline:first-child .timeline-y-axis {
-    -webkit-transform: rotate(90deg) translateX(50%);
-        -ms-transform: rotate(90deg) translateX(50%);
-            transform: rotate(90deg) translateX(50%); }
-  .timeline:last-child .timeline-y-axis {
-    -webkit-transform: rotate(90deg) translateX(-50%);
-        -ms-transform: rotate(90deg) translateX(-50%);
-            transform: rotate(90deg) translateX(-50%); }
-  .timeline .timeline-x-axis {
-    opacity: 0; }
-
-.timeline-content-animated {
-  opacity: 1 !important; }
-  .timeline-content-animated.left {
-    -webkit-animation-name: slideInLeft;
-    -ms-animation-name: slideInLeft;
-    animation-name: slideInLeft;
-    -webkit-animation-iteration-count: 1s;
-    -ms-animation-iteration-count: 1s;
-    animation-iteration-count: 1s;
-    -webkit-animation-duration: 1s;
-    -ms-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-delay: 0s;
-    -ms-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden; }
-  .timeline-content-animated.right {
-    -webkit-animation-name: slideInRight;
-    -ms-animation-name: slideInRight;
-    animation-name: slideInRight;
-    -webkit-animation-iteration-count: 1s;
-    -ms-animation-iteration-count: 1s;
-    animation-iteration-count: 1s;
-    -webkit-animation-duration: 1s;
-    -ms-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-delay: 0s;
-    -ms-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation-timing-function: ease;
-    -ms-animation-timing-function: ease;
-    animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -ms-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden; }
-
-@media (max-width: 599px) {
-  .timeline {
-    padding-top: 110px;
-    overflow: visible; }
-    .timeline .timeline-point {
-      top: 0;
-      right: 50%;
-      -webkit-transform: translate3D(50%, 0%, 0);
-          -ms-transform: translate3D(50%, 0%, 0);
-              transform: translate3D(50%, 0%, 0); }
-    .timeline .timeline-x-axis {
-      display: none; }
-    .timeline .timeline-y-axis {
-      top: 0;
-      -webkit-transform: rotate(90deg) translateX(0%) !important;
-          -ms-transform: rotate(90deg) translateX(0%) !important;
-              transform: rotate(90deg) translateX(0%) !important; } }
-
 .dashboard-container .layout-margin {
   margin: 0px; }
 
@@ -19025,13 +18891,6 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
 .elements-whiteframe-example md-whiteframe {
   min-width: 500px;
   background-color: white; }
-
-.md-select-form {
-  display: inline-block;
-  margin-top: 2px;
-  width: 100%; }
-  .md-select-form span {
-    width: 100%; }
 
 .email-dialog-to {
   box-shadow: 0 1px #e0e0e0; }
@@ -19316,11 +19175,146 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.intro-feature-row .md-whiteframe-z1 {
-  background-color: #26C6DA; }
+.extras-gallery-container {
+  height: 100%; }
 
-.intro-feature-row .md-font {
-  color: white; }
+.extras-image-dialog img {
+  max-width: 100%;
+  max-height: 480px; }
+
+.timeline {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 0; }
+  .timeline .timeline-widget {
+    z-index: 4;
+    opacity: 0;
+    overflow: hidden; }
+  .timeline .timeline-point {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate3D(50%, -50%, 0);
+        -ms-transform: translate3D(50%, -50%, 0);
+            transform: translate3D(50%, -50%, 0);
+    border-radius: 50%;
+    z-index: 2;
+    overflow: hidden; }
+  .timeline .timeline-point-date {
+    position: absolute;
+    z-index: 3;
+    background: inherit;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    line-height: 100px;
+    overflow: hidden;
+    transition: width 0.5s, height 0.5s;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+    text-align: center;
+    font-size: 0.8em;
+    border-radius: 50%; }
+  .timeline:hover .timeline-point-date {
+    width: 100%;
+    height: 100%; }
+  .timeline .timeline-y-axis {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    z-index: 1; }
+  .timeline:first-child .timeline-y-axis {
+    -webkit-transform: rotate(90deg) translateX(50%);
+        -ms-transform: rotate(90deg) translateX(50%);
+            transform: rotate(90deg) translateX(50%); }
+  .timeline:last-child .timeline-y-axis {
+    -webkit-transform: rotate(90deg) translateX(-50%);
+        -ms-transform: rotate(90deg) translateX(-50%);
+            transform: rotate(90deg) translateX(-50%); }
+  .timeline .timeline-x-axis {
+    opacity: 0; }
+
+.timeline-content-animated {
+  opacity: 1 !important; }
+  .timeline-content-animated.left {
+    -webkit-animation-name: slideInLeft;
+    -ms-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-iteration-count: 1s;
+    -ms-animation-iteration-count: 1s;
+    animation-iteration-count: 1s;
+    -webkit-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .timeline-content-animated.right {
+    -webkit-animation-name: slideInRight;
+    -ms-animation-name: slideInRight;
+    animation-name: slideInRight;
+    -webkit-animation-iteration-count: 1s;
+    -ms-animation-iteration-count: 1s;
+    animation-iteration-count: 1s;
+    -webkit-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: ease;
+    -ms-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden; }
+
+@media (max-width: 599px) {
+  .timeline {
+    padding-top: 110px;
+    overflow: visible; }
+    .timeline .timeline-point {
+      top: 0;
+      right: 50%;
+      -webkit-transform: translate3D(50%, 0%, 0);
+          -ms-transform: translate3D(50%, 0%, 0);
+              transform: translate3D(50%, 0%, 0); }
+    .timeline .timeline-x-axis {
+      display: none; }
+    .timeline .timeline-y-axis {
+      top: 0;
+      -webkit-transform: rotate(90deg) translateX(0%) !important;
+          -ms-transform: rotate(90deg) translateX(0%) !important;
+              transform: rotate(90deg) translateX(0%) !important; } }
+
+.md-select-form {
+  display: inline-block;
+  margin-top: 2px;
+  width: 100%; }
+  .md-select-form span {
+    width: 100%; }
 
 .github-user-dropdown img {
   width: 40px;
@@ -19330,6 +19324,12 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
 
 .github-user-dropdown span {
   margin-left: 16px; }
+
+.intro-feature-row .md-whiteframe-z1 {
+  background-color: #26C6DA; }
+
+.intro-feature-row .md-font {
+  color: white; }
 
 .maps-example .angular-google-map-container {
   height: 550px; }
