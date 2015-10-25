@@ -15,6 +15,54 @@ button, select, html, textarea, input {
 }
 
 // Add your CSS here
+body {
+  padding: 1em 0;
+  background-color: black;
+}
+svg {
+  max-width: 100%;
+  height: auto;
+  //display: block;
+  background-color: black;
+  top: 0px;
+
+}
+.hex {
+  opacity: 0;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-property: opacity, -webkit-transform;
+          transition-property: opacity, transform;
+  -webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+          transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hex.in-view {
+  opacity: 1;
+}
+.hex:nth-child(6n + 6) {
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
+}
+.hex:nth-child(6n + 5) {
+  -webkit-transition-delay: 550ms;
+          transition-delay: 550ms;
+}
+.hex:nth-child(6n + 4) {
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+.hex:nth-child(6n + 3) {
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
+}
+.hex:nth-child(6n + 2) {
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+}
+.hex:nth-child(6n + 1) {
+  -webkit-transition-delay: 350ms;
+          transition-delay: 350ms;
+}
 
 /**
  *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject

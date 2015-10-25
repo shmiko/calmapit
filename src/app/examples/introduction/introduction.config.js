@@ -17,6 +17,12 @@
             templateUrl: 'app/examples/introduction/introduction.tmpl.html',
             controller: 'IntroductionController',
             controllerAs: 'vm'
+        })
+        .state('hexback', {
+            url: '/hexback',
+            templateUrl: 'app/examples/introduction/hexback.html'
+            // controller: 'IntroductionController',
+            // controllerAs: 'vm'
         });
 
         // add menu to calmapit
