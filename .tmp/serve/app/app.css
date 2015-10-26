@@ -18803,31 +18803,6 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
 .calendar-color-select md-option {
   text-transform: capitalize; }
 
-.google-example-chart {
-  padding: 24px; }
-
-.chartjs-example-chart {
-  padding: 24px; }
-
-.dashboard-container .layout-margin {
-  margin: 0px; }
-
-.dashboard-fullwidth-chart .chart-container {
-  position: relative;
-  left: -5px;
-  bottom: -5px;
-  width: calc(100% + 10px); }
-
-.dashboard-no-bar-tabs md-tabs-wrapper {
-  display: none; }
-
-.google-chart {
-  height: 100%;
-  width: 100%; }
-
-.tabs-tall md-pagination-wrapper, .tabs-tall md-tabs-canvas {
-  height: 72px; }
-
 .email-dialog-to {
   box-shadow: 0 1px #e0e0e0; }
   .email-dialog-to .md-icon-button {
@@ -19111,6 +19086,31 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
   -o-backface-visibility: hidden;
   backface-visibility: hidden; }
 
+.dashboard-container .layout-margin {
+  margin: 0px; }
+
+.dashboard-fullwidth-chart .chart-container {
+  position: relative;
+  left: -5px;
+  bottom: -5px;
+  width: calc(100% + 10px); }
+
+.dashboard-no-bar-tabs md-tabs-wrapper {
+  display: none; }
+
+.google-chart {
+  height: 100%;
+  width: 100%; }
+
+.tabs-tall md-pagination-wrapper, .tabs-tall md-tabs-canvas {
+  height: 72px; }
+
+.google-example-chart {
+  padding: 24px; }
+
+.chartjs-example-chart {
+  padding: 24px; }
+
 .extras-gallery-container {
   height: 100%; }
 
@@ -19245,13 +19245,6 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
           -ms-transform: rotate(90deg) translateX(0%) !important;
               transform: rotate(90deg) translateX(0%) !important; } }
 
-.md-select-form {
-  display: inline-block;
-  margin-top: 2px;
-  width: 100%; }
-  .md-select-form span {
-    width: 100%; }
-
 .github-user-dropdown img {
   width: 40px;
   height: 40px;
@@ -19267,19 +19260,12 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
 .intro-feature-row .md-font {
   color: white; }
 
-.maps-example .angular-google-map-container {
-  height: 550px; }
-
-#map_canvas {
-  height: 100%;
-  width: 100%;
-  margin: 0px; }
-  #map_canvas .angular-google-map-container {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px; }
+.md-select-form {
+  display: inline-block;
+  margin-top: 2px;
+  width: 100%; }
+  .md-select-form span {
+    width: 100%; }
 
 .todo-container .slide.ng-enter {
   -webkit-animation-name: slideInRight;
@@ -19334,6 +19320,20 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
     padding: 0px; }
     .todo-container md-card {
       margin: 0px; } }
+
+.maps-example .angular-google-map-container {
+  height: 550px; }
+
+#map_canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0px; }
+  #map_canvas .angular-google-map-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px; }
 
 .ui-color-grid md-grid-tile {
   cursor: pointer; }

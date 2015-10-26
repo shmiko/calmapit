@@ -18,6 +18,13 @@
             selectable: true,
             editable: true,
             header: false,
+            // url: "http://www.google.com/calendar/feeds/15dcnca6hga2rqna9f651qc5d0@group.calendar.google.com",
+            // className: 'gcal-event'//,           // an option!
+            
+            googleCalendarApiKey: 'AIzaSyCDyuMEpvjNHZS8ACf1rJPhxMOODrfJyL4',
+            events: {
+                googleCalendarId: 'http://www.google.com/calendar/feeds/15dcnca6hga2rqna9f651qc5d0@group.calendar.google.com'
+            },
             viewRender: function(view) {
                 // change day
                 vm.currentDay = view.calendar.getDate();
