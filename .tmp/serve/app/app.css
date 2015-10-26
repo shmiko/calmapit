@@ -18803,6 +18803,12 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
 .calendar-color-select md-option {
   text-transform: capitalize; }
 
+.google-example-chart {
+  padding: 24px; }
+
+.chartjs-example-chart {
+  padding: 24px; }
+
 .dashboard-container .layout-margin {
   margin: 0px; }
 
@@ -18821,12 +18827,6 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
 
 .tabs-tall md-pagination-wrapper, .tabs-tall md-tabs-canvas {
   height: 72px; }
-
-.google-example-chart {
-  padding: 24px; }
-
-.chartjs-example-chart {
-  padding: 24px; }
 
 .email-dialog-to {
   box-shadow: 0 1px #e0e0e0; }
@@ -19252,12 +19252,6 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
   .md-select-form span {
     width: 100%; }
 
-.intro-feature-row .md-whiteframe-z1 {
-  background-color: #26C6DA; }
-
-.intro-feature-row .md-font {
-  color: white; }
-
 .github-user-dropdown img {
   width: 40px;
   height: 40px;
@@ -19266,6 +19260,26 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
 
 .github-user-dropdown span {
   margin-left: 16px; }
+
+.intro-feature-row .md-whiteframe-z1 {
+  background-color: #26C6DA; }
+
+.intro-feature-row .md-font {
+  color: white; }
+
+.maps-example .angular-google-map-container {
+  height: 550px; }
+
+#map_canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0px; }
+  #map_canvas .angular-google-map-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px; }
 
 .todo-container .slide.ng-enter {
   -webkit-animation-name: slideInRight;
@@ -19399,20 +19413,6 @@ md-select[md-container-class="calendar-color-select"] md-select-value span {
   width: 40px;
   border-radius: 50%;
   z-index: 5; }
-
-.maps-example .angular-google-map-container {
-  height: 550px; }
-
-#map_canvas {
-  height: 100%;
-  width: 100%;
-  margin: 0px; }
-  #map_canvas .angular-google-map-container {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 0px; }
 
 .login-frame md-card {
   max-width: 400px;
