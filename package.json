@@ -2,7 +2,7 @@
   "name": "calmapit",
   "description": "A Calendar Map Itinerary.",
   "author": "https://github.com/shmiko/calmapit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "devDependencies": {
     "browser-sync": "~1.7.1",
     "chalk": "~0.5.1",
