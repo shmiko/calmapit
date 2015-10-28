@@ -84,8 +84,7 @@ var server = app.listen(2002, function() {
   var host = server.address().address;
   var port = server.address().port;
   console.log('************************');
-    console.log('Calmapit Server');
-    console.log('Listening on port ' + port);
+    console.log('Calmapit Server Listening on port ' + port);
     console.log('\nRemember to first start MongoDb server');
     console.log('************************\n');
     console.log('env = ' + app.get('env') +
