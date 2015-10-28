@@ -84,7 +84,7 @@ var server = app.listen(2002, function() {
   var host = server.address().address;
   var port = server.address().port;
   console.log('************************');
-    console.log('Code Camper MEAN Server');
+    console.log('Calmapit Server');
     console.log('Listening on port ' + port);
     console.log('\nRemember to first start MongoDb server');
     console.log('************************\n');
@@ -94,10 +94,4 @@ var server = app.listen(2002, function() {
         '\nprocess.cwd() = ' + process.cwd());
   console.log('Listening at http://%s:%s', host, port);
 });
-
-
-
-
-
-
 
