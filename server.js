@@ -6,6 +6,7 @@ var googleConfig = {
   redirectURL: 'http://localhost:2002/auth'
 };
 
+
 // Dependency setup
 var express = require('express'),
   moment = require('moment'),
