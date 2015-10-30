@@ -14,7 +14,7 @@
             url: '/todo',
             views: {
                 '': {
-                    templateUrl: 'app/examples/todo/calmap.tmpl.html',
+                    templateUrl: 'app/examples/todo/todo.tmpl.html',
                     controller: 'TodoController',
                     controllerAs: 'vm'
                 },
