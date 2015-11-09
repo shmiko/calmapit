@@ -6,7 +6,7 @@
         .controller('EventDialogController', EventDialogController);
 
     /* @ngInject */
-    function EventDialogController($scope, $mdDialog, $filter, cmiTheming, dialogData, event, edit) {
+    function EventDialogController($scope, $mdDialog, $filter, triTheming, dialogData, event, edit) {
 
         var vm = this;
         vm.cancelClick = cancelClick;
@@ -98,12 +98,12 @@
         createDateSelectOptions();
 
         // create colors
-        angular.forEach(cmiTheming.palettes, function(palette, index) {
+        angular.forEach(triTheming.palettes, function(palette, index) {
             var color = {
                 name: index.replace(/-/g, ' '),
                 palette: index,
-                backgroundColor: cmiTheming.rgba(palette['500'].value),
-                textColor: cmiTheming.rgba(palette['500'].contrast)
+                backgroundColor: triTheming.rgba(palette['500'].value),
+                textColor: triTheming.rgba(palette['500'].contrast)
             };
 
             vm.colors.push(color);

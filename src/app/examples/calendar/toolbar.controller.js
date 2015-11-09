@@ -6,9 +6,9 @@
         .controller('CalendarToolbarController', CalendarToolbarController);
 
     /* @ngInject */
-    function CalendarToolbarController($scope, $state, $element, $mdUtil, $mdSidenav, cmiBreadcrumbsService, uiCalendarConfig) {
+    function CalendarToolbarController($scope, $state, $element, $mdUtil, $mdSidenav, triBreadcrumbsService, uiCalendarConfig) {
         var vm = this;
-        vm.breadcrumbs = cmiBreadcrumbsService.breadcrumbs;
+        vm.breadcrumbs = triBreadcrumbsService.breadcrumbs;
         vm.changeMonth = changeMonth;
         vm.changeView = changeView;
         vm.openSideNav = openSideNav;
@@ -30,12 +30,12 @@
         //////////////
 
         function changeMonth(direction) {
-            uiCalendarConfig.calendars['calmapit-calendar'].fullCalendar(direction);
+            uiCalendarConfig.calendars['triangular-calendar'].fullCalendar(direction);
         }
 
         function changeView(view) {
             vm.currentView = view;
-            uiCalendarConfig.calendars['calmapit-calendar'].fullCalendar('changeView', view.viewName);
+            uiCalendarConfig.calendars['triangular-calendar'].fullCalendar('changeView', view.viewName);
         }
 
         function openSideNav(navID) {

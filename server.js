@@ -1,9 +1,9 @@
 // Google OAuth Configuration
 var googleConfig = {
-  clientID: '407717796667-sh0t4hgem57ogpbu54rcqamf1tdv16rb.apps.googleusercontent.com',
-  clientSecret: 'cT0Ph6uvCpsg5RODBhhKh56O',
+  clientID: '407717796667-tb2kggth8m5jmfj9rap7d16qa7s6nh7r.apps.googleusercontent.com',
+  clientSecret: '8rhx8fL3c2mttpFsprGxGtOc',
   calendarId: '15dcnca6hga2rqna9f651qc5d0@group.calendar.google.com',
-  redirectURL: 'http://localhost:2002/auth'
+  redirectURL: 'http://localhost:2222/oauth'
 };
 
 

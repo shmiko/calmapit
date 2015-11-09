@@ -5,10 +5,10 @@
     <!-- main content -->
     <div layout="column" flex id="admin-panel" layout="column" flex>
         <!-- loading animation -->
-        <cmi-loader></cmi-loader>
+        <tri-loader></tri-loader>
 
         <!-- top toolbar -->
-        <md-toolbar class="admin-toolbar" md-theme="{{cmiSkin.elements.toolbar}}" ui-view="toolbar" ng-class="toolbarTypeClass()"></md-toolbar>
+        <md-toolbar class="admin-toolbar" md-theme="{{triSkin.elements.toolbar}}" ui-view="toolbar" ng-class="toolbarTypeClass()"></md-toolbar>
 
         <div ui-view="content" layout="column" flex class="overflow-auto"></div>
     </div>

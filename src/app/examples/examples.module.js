@@ -4,7 +4,7 @@
     angular
         .module('app.examples', [
             'app.examples.authentication',
-            //'app.examples.calendar',
+            'app.examples.calendar',
             //'app.examples.calmap',
             //'app.examples.dashboards',
             //'app.examples.elements',
